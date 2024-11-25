@@ -9,8 +9,15 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
+
+import os
 import environ
+import dj_database_url
 from pathlib import Path
+
+env = environ.Env()
+env_file_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env')
+environ.Env.read_env(env_file_path)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +32,10 @@ SECRET_KEY = 'django-insecure-xqj^92*2brrz*u@4x^2^ymrs86g0%1mww(4i664v)x7d)ezz10
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['pixel-craft.herokuapp.com']
+ALLOWED_HOSTS = [
+    'pixel-craft.herokuapp.com',
+    '8000-hcaldwell95-pixelcraft-rdfd19xyzal.ws.codeinstitute-ide.net',
+]
 
 
 # Application definition
@@ -80,17 +90,14 @@ WSGI_APPLICATION = 'pixel_craft.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-env = environ.Env()
-environ.Env.read_env()
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env('DB_NAME'),
-        'USER': env('DB_USER'),
-        'PASSWORD': env('DB_PASSWORD'),
-        'HOST': env('DB_HOST'),
-        'PORT': env('DB_PORT'),
+        'ENGINE': f"django.db.backends.{env('DATABASE_ENGINE')}",
+        'NAME': env('DATABASE_NAME'),
+        'USER': env('DATABASE_USER'),
+        'PASSWORD': env('DATABASE_PASSWORD'),
+        'HOST': env('DATABASE_HOST'),
+        'PORT': env('DATABASE_PORT', default='5432'),  # Default port for PostgreSQL
     }
 }
 

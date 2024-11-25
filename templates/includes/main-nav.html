@@ -1,0 +1,32 @@
+{% load static %}
+
+<nav class="navbar navbar-light navbar-expand-lg navbar-container" aria-label="Main navigation">
+    <div class="container-fluid">
+        <a href="/" class="navbar-brand mr-auto logo-link" aria-label="Home page">
+            <img src="{% static 'media/mini-logo.png' %}" alt="PixelCraft Logo">
+        </a>
+        <div class="navbar-nav ms-auto">
+            {% with url_name=request.resolver_match.url_name %}
+            <li class="nav-item {% if not url_name or url_name == 'home' %}active{% endif %}">
+                <a class="nav-link" href="" aria-label="Home">Home</a>
+            </li>
+            <li class="nav-item {% if url_name == 'products' %}active{% endif %}">
+                <a class="nav-link" href="" aria-label="Products">Products</a>
+            </li>
+
+            {% if user.is_authenticated %}
+            <li class="nav-item {% if url_name == 'orders' %}active{% endif %}">
+                <a class="nav-link" href="" aria-label="Orders">Orders</a>
+            </li>
+            <li class="nav-item {% if url_name == 'profile' %}active{% endif %}">
+                <a class="nav-link" href="" aria-label="My Profile">My Profile</a>
+            </li>
+            {% else %}
+            <li class="nav-item {% if url_name == 'login' %}active{% endif %}">
+                <a class="nav-link" href="" aria-label="Sign In">Login / Sign Up</a>
+            </li>
+            {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+</nav>

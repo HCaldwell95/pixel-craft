@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 
 # Create your views here.
 
-def home_details(request):
+def index(request):
     """
     Renders the home page.
 
@@ -12,4 +12,4 @@ def home_details(request):
     Returns:
         HttpResponse: Rendered home page template.
     """
-    return render(request, 'home.html')
+    return render(request, 'home/index.html')

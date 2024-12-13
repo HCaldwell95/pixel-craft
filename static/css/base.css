@@ -48,13 +48,27 @@ body {
     border: none;
 }
 
-.navbar-toggler-icon {
-    background-color: #333;  /* Toggle icon color */
-}
-
 .navbar-brand  {
     padding-left: 50px;
 }
+
+
+/* ------------------------ Navbar separation borders */
+.navbar-nav {
+    display: flex;
+}
+
+/* Add borders between nav items */
+.navbar-nav .nav-item:not(:first-child) {
+    border-left: 1px solid #ccc; /* Adds a border starting from "Products" */
+}
+
+.navbar-nav .nav-item {
+    padding-left: 115px;
+
+}
+
+
 
 .fixed-top {
     padding: 0.5em 0;
@@ -170,7 +184,7 @@ a.category-badge > span.badge:hover {
 
 .social-links a {
     font-size: 1.5rem;
-    margin-right: 15px;
+    margin: 0 7.5px;
     color: #333;
     text-decoration: none;
 }
@@ -211,6 +225,45 @@ a.category-badge > span.badge:hover {
 
 
 /* -------------------------------- Media Queries */
+
+@media (max-width: 767px) {
+
+    .navbar-brand  {
+        padding-left: 20px;
+    }
+
+    /* ------------------------------------ Footer Styles */
+
+
+    .footer-logo {
+        max-width: 100px;
+        height: auto;
+        padding: 3em 0;
+        margin-left: 25px;
+    }
+
+    .social-links a {
+        font-size: 1.5rem;
+        margin: 20px 15px;
+    }
+
+    .footer-divider {
+        border-top: 3px solid #ccc;
+    }
+
+    .footer-links li {
+        margin: 5px 15px;
+    }
+
+    #footer-about {
+        margin-right: 0.5em;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+}
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {

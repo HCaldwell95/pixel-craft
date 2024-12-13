@@ -167,32 +167,52 @@ a.category-badge > span.badge:hover {
 
 /* ------------------------------------- Home Styles */
 
+.services-section {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-top: 5px groove #D0FFD1;
+}
+
 .service-icon {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 15px;
-    background: #f7f7f7;
+    background: #ffffff;
     border-radius: 50%;
+    overflow: hidden;
+}
+
+.service-icon img {
+    width: 65%;
+    height: 65%;
+    object-fit: contain;
+    position: relative;
+    z-index: 999;
+    border-radius: 0!important;
 }
 
 .service-title {
     font-size: 1.2rem;
     font-weight: 600;
     margin: 10px 0;
+    color: #a8a8a8;
 }
 
 .service-cost {
     font-size: 1rem;
     font-weight: 500;
-    color: #555;
+    color: #a8a8a8;
 }
 
 .service-description {
     font-size: 0.9rem;
-    color: #777;
+    color: #c7c7c7;
+}
+
+.service-link {
+    text-decoration: none;
 }
 
 

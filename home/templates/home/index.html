@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
+    <div class="container">
         <div class="row">
             <div class="col"></div>
         </div>
@@ -24,4 +24,26 @@
             </div>
         </div>
     </div>
+
+    <section class="services-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Services</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+                {% for service in services %}
+                <div class="col text-center">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <img src="{% static service.icon %}" alt="{{ service.title }}" class="img-fluid rounded-circle">
+                        </div>
+                        <h3 class="service-title">{{ service.title }}</h3>
+                        <p class="service-cost">{{ service.cost }}</p>
+                        <p class="service-description">{{ service.description }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    
+    
 {% endblock %}

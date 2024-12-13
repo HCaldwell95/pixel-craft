@@ -38,6 +38,9 @@ ALLOWED_HOSTS = [
     '8000-hcaldwell95-pixelcraft-eokyt2ue3qq.ws.codeinstitute-ide.net',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-hcaldwell95-pixelcraft-eokyt2ue3qq.ws.codeinstitute-ide.net',
+]
 
 # Application definition
 

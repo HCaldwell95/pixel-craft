@@ -52,7 +52,7 @@ def index(request):
         {
             "title": "Flyer Design",
             "cost": "£100",
-            "description": "Custom email templates designed to enhance your email marketing.",
+            "description": "Creative flyer designs to effectively showcase your brand or event.",
             "icon": "images/flyer-design.png",
         },
         {

@@ -35,6 +35,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'pixel-craft.herokuapp.com',
     '8000-hcaldwell95-pixelcraft-rdfd19xyzal.ws.codeinstitute-ide.net',
+    '8000-hcaldwell95-pixelcraft-eokyt2ue3qq.ws.codeinstitute-ide.net',
 ]
 
 
@@ -141,7 +142,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'

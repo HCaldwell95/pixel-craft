@@ -10,6 +10,11 @@ body {
     font-family: 'Lato';
 }
 
+/* Header Backgrounds */
+
+
+
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -50,6 +55,10 @@ body {
 
 .text-black {
     color: #000 !important;
+}
+
+.text-white {
+    color: #ffffff !important;
 }
 
 .border-black {

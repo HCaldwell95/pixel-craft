@@ -2,19 +2,21 @@
 
 <!doctype html>
 <html lang="en">
-  <head>
 
+  <head>
     {% block meta %}
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="PixelCraft. A creative graphic design agency specialising in innovative designs and precise craftsmanship. Based in Abergele, North Wales. Elevate your brand with ingenuity and unmatched quality.">
+        <meta name="keywords" content="PixelCraft, graphic design, creative design, branding, high-quality design, innovative designs, Abergele, North Wales, precision, ingenuity">
     {% endblock %}
 
     {% block extra_meta %}
     {% endblock %}
 
     {% block corecss %}
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
@@ -33,17 +35,20 @@
     {% endblock %}
 
     <title>PixelCraft {% block extra_title %}{% endblock %}</title>
+
   </head>
+
+
   <body>
-    <header class="container-fluid fixed-top">
-        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
+    <header class="container-fluid fixed-top header-background-container">
+        <div id="topnav" class="row bg-header-transwhite pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-black my-0"><strong>Pixel</strong>Craft</h2>
+                    <h2 class="logo-font text-white my-0"><strong>Pixel</strong>Craft</h2>
                 </a>
             </div>
         </div>
-        <div class="row bg-white">
+        <div class="row bg-header-transwhite">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>

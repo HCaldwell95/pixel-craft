@@ -8,6 +8,10 @@ body {
     font-family: 'Lato';
 }
 
+a {
+    text-decoration: none;
+}
+
 /* Top Nav Styling */
 
 #topnav .main-logo-link h2 {
@@ -235,8 +239,60 @@ a.category-badge > span.badge:hover {
     color: #c7c7c7;
 }
 
-.service-link {
-    text-decoration: none;
+/* ---------------------------------- Portfolio Section */
+
+.portfolio-section {
+    background-color: rgba(57, 83, 70, 0.9);
+    border-top: 5px groove #D0FFD1;
+}
+
+/* Ensure all cards are portrait style */
+.portfolio-card .card {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure card image covers the card space */
+.portfolio-card .card-img-top {
+    object-fit: cover;
+    height: 450px;
+}
+
+/* Style the card body */
+.portfolio-card .card-body {
+    padding: 1.25rem;
+    background-color: rgba(36, 36, 36, 0.9);
+}
+
+/* Hover Effect on Cards */
+.portfolio-card .card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Centering card title and description */
+.portfolio-card .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color:#e0e0e0;
+}
+
+.portfolio-card .card-text {
+    font-size: 1rem;
+    color: #c7c7c7;
+}
+
+/* Ensuring equal spacing between cards */
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col-md-4 {
+    flex: 1;
+    margin: 0 10px;  /* Ensure cards are spaced evenly */
 }
 
 
@@ -252,6 +308,10 @@ a.category-badge > span.badge:hover {
     margin-bottom: 10px;
 }
 
+#footer-about a {
+    text-decoration: underline;
+}
+
 .footer-logo {
     max-width: 200px;
     height: auto;
@@ -261,7 +321,6 @@ a.category-badge > span.badge:hover {
     font-size: 1.5rem;
     margin: 0 7.5px;
     color: #333;
-    text-decoration: none;
 }
 
 .social-links a:hover {
@@ -286,7 +345,6 @@ a.category-badge > span.badge:hover {
 .footer-links a {
     color: #333;
     font-weight: bold;
-    text-decoration: none;
 }
 
 .footer-links a:hover {

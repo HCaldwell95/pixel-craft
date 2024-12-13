@@ -12,6 +12,7 @@ def index(request):
     Returns:
         HttpResponse: Rendered home page template.
     """
+    # Services data
     services = [
         {
             "title": "Logo Designs",
@@ -61,6 +62,28 @@ def index(request):
             "description": "Unique and functional packaging design for your products.",
             "icon": "images/packaging-design.png",
         },
-        # Add more services here as needed
     ]
-    return render(request, 'home/index.html', {"services": services})
+
+    # Portfolio images data
+    portfolio_images = [
+        {
+            "img_url": "images/logo-portfolio.jpg",
+            "title": "Logo Design",
+            "description": "A stunning logo for a modern brand."
+        },
+        {
+            "img_url": "images/website-portfolio.png",
+            "title": "Website Design",
+            "description": "A sleek, responsive website design."
+        },
+        {
+            "img_url": "images/business-card-portfolio.jpg",
+            "title": "Business Cards",
+            "description": "Professionally designed business cards."
+        },
+    ]
+
+    return render(request, 'home/index.html', {
+    "services": services,
+    "portfolio_images": portfolio_images,
+    })

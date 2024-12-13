@@ -77,6 +77,31 @@
             </div>
         </div>
     </section>
+
+    <section class="portfolio-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 text-white section-heading">Our Portfolio</h2>
+    
+            <!-- Portfolio Cards -->
+            <div class="row">
+                {% for image in portfolio_images %}
+                    <div class="col-md-4 mb-4">
+                        <!-- Portfolio Card -->
+                        <a href="{{ image.link }}" class="portfolio-card">
+                            <div class="card">
+                                <img src="{% static image.img_url %}" class="card-img-top" alt="Portfolio Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ image.title }}</h5>
+                                    <p class="card-text">{{ image.description }}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    
     
     
     

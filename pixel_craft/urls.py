@@ -25,3 +25,7 @@ urlpatterns = [
     path('', include('home.urls')),
     # path('orders/'),
 ]
+
+# Serve media files in development (use only in development)
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

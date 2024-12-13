@@ -1,41 +1,60 @@
-html {
-    height: 100%;
-}
+
 
 body {
-    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
+    background: url("{% static 'images/home-hero.jpg' %}") no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Lato';
 }
 
-/* Navbar styles */
+/* Top Nav Styling */
 
-.logo-img {
-    max-height: 60px; /* Adjust logo size */
+#topnav .main-logo-link h2 {
+    font-family: 'Arial', sans-serif;  /* Example for logo font */
+    color: #fff;
+    font-size: 1.5rem;
 }
 
-.navbar-nav {
-    flex: 1; /* Allow tabs to take up full width */
+/* Search Box Styling */
+#topnav .input-group {
+    max-width: 350px;
+    margin: 0 auto;
 }
 
-.navbar-nav .nav-item {
-    text-align: center;
+#topnav .input-group input {
+    border-radius: 0;
+    border-color: #000;
 }
 
-.navbar-nav .nav-link {
-    font-size: 1rem;
-    color: #000; /* Text color */
-    font-weight: 500;
-    transition: color 0.3s ease;
+/* Account Menu Styling */
+#topnav .dropdown-menu {
+    background-color: #fff;
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-nav .nav-link:hover,
-.nav-item.active .nav-link {
-    color: #007bff; /* Active/hover color */
+#topnav .dropdown-menu a {
+    color: #333;
 }
 
+/* Navbar Styling */
+.navbar {
+    background-color: #fff;
+    padding: 0;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-color: #333;  /* Toggle icon color */
+}
+
+.fixed-top {
+    margin-top: 0.5em;
+}
 
 /* from Bulma */
 .icon {
@@ -77,6 +96,10 @@ body {
 
 .text-black {
     color: #000 !important;
+}
+
+.text-white {
+    color: #ffffff !important;
 }
 
 .border-black {

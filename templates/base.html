@@ -87,4 +87,56 @@
 
     
   </body>
+
+  <footer class="footer bg-offwhite py-5">
+    <div class="container">
+        <div class="row text-center">
+            <!-- Left Column: Studio Hours -->
+            <div class="col-md-4">
+                <h5 class="footer-header">Studio Hours</h5>
+                <p>Mon-Fri: 9:00 AM - 6:00 PM</p>
+                <p>Sat: 10:00 AM - 4:00 PM</p>
+                <p>Sun: Closed</p>
+                <div class="social-links">
+                    <a href="#" class="text-black mr-3"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-black mr-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-black mr-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-black mr-3"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <!-- Logo -->
+            <div class="col-md-4 my-auto">
+                <a href="{% url 'home' %}" class="nav-link">
+                    <img src="{% static 'images/logo.png' %}" alt="Logo" class="footer-logo">
+                </a>
+            </div>
+
+            <!-- Right Column: About -->
+            <div class="col-md-4">
+                <h5 class="footer-header">About</h5>
+                <p>We are a graphic design creation business, focusing on innovative designs for a variety of media. We create professional, unique designs that help brands stand out.</p>
+                <a href="" class="text-black">Diversity Policy</a>
+            </div>
+        </div>
+
+        <!-- Line break -->
+        <hr class="footer-divider">
+
+        <div class="row text-center">
+            <div class="col-12">
+                <ul class="footer-links list-inline">
+                    <li class="list-inline-item"><a href="#">Work With Me</a></li>
+                    <li class="list-inline-item"><a href="#">Experience</a></li>
+                    <li class="list-inline-item"><a href="#">Portfolio</a></li>
+                    <li class="list-inline-item"><a href="#">FAQ</a></li>
+                    <li class="list-inline-item"><a href="#">About</a></li>
+                    <li class="list-inline-item"><a href="#">Enquire</a></li>
+                    <li class="list-inline-item"><a href="#">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
 </html>

@@ -1,0 +1,422 @@
+[
+    {
+        "model": "products.product",
+        "pk": 1,
+        "fields": {
+            "_id": "1",
+            "guid": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+            "about": "High-quality poster prints designed with precision and creativity. Perfect for modern interiors and businesses looking for unique branding.",
+            "tags": ["poster prints", "branding", "modern design", "artwork", "custom orders"],
+            "name": "Poster Prints",
+            "description": "High-quality poster prints designed with precision and creativity. Perfect for modern interiors and businesses looking for unique branding.",
+            "price": 200.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 2,
+        "fields": {
+            "_id": "2",
+            "guid": "b45b98a3-212c-4724-aabb-7a8d01d6ed89",
+            "about": "Elegant stationery sets featuring personalised designs for businesses and individuals, perfect for leaving a lasting impression.",
+            "tags": ["stationery", "personalised", "elegant design", "branding", "creative sets"],
+            "name": "Stationery Set",
+            "description": "Elegant stationery sets featuring personalised designs for businesses and individuals, perfect for leaving a lasting impression.",
+            "price": 340.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 3,
+        "fields": {
+            "_id": "3",
+            "guid": "ce12b98f-2f35-4f0f-a7ac-07f9a84b8655",
+            "about": "Custom graphic t-shirts with artistic designs that express individuality and style.",
+            "tags": ["t-shirts", "custom designs", "artistic", "wearable art", "style"],
+            "name": "Custom Graphic T-Shirts",
+            "description": "Custom graphic t-shirts with artistic designs that express individuality and style.",
+            "price": 185.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 4,
+        "fields": {
+            "_id": "4",
+            "guid": "d597abfd-6df3-478b-9e56-b0db1caa5064",
+            "about": "Eye-catching logo designs that define your brand and leave a memorable impression.",
+            "tags": ["logo design", "branding", "visual identity", "business essentials", "creative branding"],
+            "name": "Logo Designs",
+            "description": "Eye-catching logo designs that define your brand and leave a memorable impression.",
+            "price": 300.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 5,
+        "fields": {
+            "_id": "5",
+            "guid": "2f94c8b7-5e91-46ba-b7d7-d9264246f032",
+            "about": "Premium business cards featuring unique textures and designs to make your brand stand out.",
+            "tags": ["business cards", "premium design", "branding", "creative solutions", "print essentials"],
+            "name": "Premium Business Cards",
+            "description": "Premium business cards featuring unique textures and designs to make your brand stand out.",
+            "price": 200.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 6,
+        "fields": {
+            "_id": "6",
+            "guid": "8c96a876-9449-4504-98d3-c10c378c8a3d",
+            "about": "Unique wall art prints, blending artistic vision and modern aesthetics to enhance your living space.",
+            "tags": ["wall art", "modern prints", "aesthetic design", "home decor", "creative artwork"],
+            "name": "Wall Art Prints",
+            "description": "Unique wall art prints, blending artistic vision and modern aesthetics to enhance your living space.",
+            "price": 150.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 7,
+        "fields": {
+            "_id": "7",
+            "guid": "93e89331-5759-4389-97e1-058c983b4703",
+            "about": "Innovative packaging design that captures your product’s story and appeals to your audience.",
+            "tags": ["packaging design", "creative branding", "storytelling", "visual appeal", "product design"],
+            "name": "Packaging Design",
+            "description": "Innovative packaging design that captures your product’s story and appeals to your audience.",
+            "price": 200.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 8,
+        "fields": {
+            "_id": "8",
+            "guid": "4f0b92e9-9c28-41a3-8463-0dbd5ad388c5",
+            "about": "Personalised social media templates designed for seamless branding and impactful online presence.",
+            "tags": ["social media templates", "branding", "digital design", "custom graphics", "online presence"],
+            "name": "Social Media Templates",
+            "description": "Personalised social media templates designed for seamless branding and impactful online presence.",
+            "price": 220.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 9,
+        "fields": {
+            "_id": "9",
+            "guid": "fd4a3fd2-f6b4-4238-9959-b4010b4c4e3d",
+            "about": "Bold typography art prints, perfect for creative spaces and modern decor.",
+            "tags": ["typography art", "modern design", "art prints", "creative spaces", "home decor"],
+            "name": "Typography Art Prints",
+            "description": "Bold typography art prints, perfect for creative spaces and modern decor.",
+            "price": 125.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 10,
+        "fields": {
+            "_id": "10",
+            "guid": "378b672e-0bdf-4427-9181-6f5b1fdb91bc",
+            "about": "Creative brochure designs tailored to highlight your services and engage your audience.",
+            "tags": ["brochure design", "creative solutions", "branding", "marketing materials", "print design"],
+            "name": "Creative Brochure Designs",
+            "description": "Creative brochure designs tailored to highlight your services and engage your audience.",
+            "price": 175.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 11,
+        "fields": {
+            "_id": "11",
+            "guid": "c5d44f1e-e6c3-4630-a460-fc72ad8e69de",
+            "about": "Stylish business stationery, including letterheads and envelopes for a professional presentation.",
+            "tags": ["stationery", "business essentials", "branding", "letterheads", "professional"],
+            "name": "Business Stationery",
+            "description": "Stylish business stationery, including letterheads and envelopes for a professional presentation.",
+            "price": 150.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 12,
+        "fields": {
+            "_id": "12",
+            "guid": "ed16e2c1-7554-46f1-9750-e6b67d5d72f3",
+            "about": "Customisable business flyers to promote your services with eye-catching designs.",
+            "tags": ["flyers", "marketing materials", "business promotion", "creative design"],
+            "name": "Custom Business Flyers",
+            "description": "Customisable business flyers to promote your services with eye-catching designs.",
+            "price": 120.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 13,
+        "fields": {
+            "_id": "13",
+            "guid": "2e9cc4f0-070f-4695-b50f-c914e503abaf",
+            "about": "Personalised event invitations designed with elegance for any special occasion.",
+            "tags": ["invitations", "personalised", "event design", "elegant"],
+            "name": "Personalised Event Invitations",
+            "description": "Personalised event invitations designed with elegance for any special occasion.",
+            "price": 100.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 14,
+        "fields": {
+            "_id": "14",
+            "guid": "3c8d8486-3209-4b7c-bf12-700bc4373146",
+            "about": "Creative menu designs for restaurants, cafes, and bars that showcase your offerings beautifully.",
+            "tags": ["menu design", "restaurant branding", "creative design", "hospitality"],
+            "name": "Creative Menu Designs",
+            "description": "Creative menu designs for restaurants, cafes, and bars that showcase your offerings beautifully.",
+            "price": 180.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 15,
+        "fields": {
+            "_id": "15",
+            "guid": "d57b4f5f-4625-4b93-b91d-d5049ea73555",
+            "about": "Custom designed packaging that enhances your product's appeal with unique finishes and features.",
+            "tags": ["packaging design", "custom finishes", "product branding"],
+            "name": "Custom Product Packaging",
+            "description": "Custom designed packaging that enhances your product's appeal with unique finishes and features.",
+            "price": 250.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 16,
+        "fields": {
+            "_id": "16",
+            "guid": "dfd0e34b-92c9-409f-a1f0-6e2d7d4779f2",
+            "about": "Standout business cards that reflect the essence of your brand with creative designs.",
+            "tags": ["business cards", "branding", "creative design", "professional networking"],
+            "name": "Standout Business Cards",
+            "description": "Standout business cards that reflect the essence of your brand with creative designs.",
+            "price": 220.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 17,
+        "fields": {
+            "_id": "17",
+            "guid": "8d6dbd33-dc45-49d3-bbdb-ea5082c22c1b",
+            "about": "Modern branding solutions with logo design, business cards, and digital assets tailored to your brand.",
+            "tags": ["branding", "logo design", "business identity"],
+            "name": "Modern Branding Package",
+            "description": "Modern branding solutions with logo design, business cards, and digital assets tailored to your brand.",
+            "price": 500.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 18,
+        "fields": {
+            "_id": "18",
+            "guid": "77f41a9f-702e-46c5-9bde-efba4c5c479a",
+            "about": "Custom-designed product labels for a professional, polished look for your merchandise.",
+            "tags": ["product labels", "custom design", "branding"],
+            "name": "Custom Product Labels",
+            "description": "Custom-designed product labels for a professional, polished look for your merchandise.",
+            "price": 130.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 19,
+        "fields": {
+            "_id": "19",
+            "guid": "9c3a5a89-8d79-4b30-9b9d-d107238632d0",
+            "about": "Tailored email templates to enhance your digital marketing with a professional design.",
+            "tags": ["email templates", "digital marketing", "custom design", "branding"],
+            "name": "Tailored Email Templates",
+            "description": "Tailored email templates to enhance your digital marketing with a professional design.",
+            "price": 160.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 20,
+        "fields": {
+            "_id": "20",
+            "guid": "70e261fa-7b99-4385-b4b2-f5e9c75a0f12",
+            "about": "Engaging and fun infographic designs that simplify complex data and attract attention.",
+            "tags": ["infographics", "data visualization", "graphic design"],
+            "name": "Infographic Designs",
+            "description": "Engaging and fun infographic designs that simplify complex data and attract attention.",
+            "price": 140.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 21,
+        "fields": {
+            "_id": "21",
+            "guid": "56d42b27-c649-459a-bf42-cd8a7710d091",
+            "about": "Professional photography services for your product, brand, or event to capture high-quality visuals.",
+            "tags": ["photography", "product photography", "brand images", "event photography"],
+            "name": "Photography Services",
+            "description": "Professional photography services for your product, brand, or event to capture high-quality visuals.",
+            "price": 600.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 22,
+        "fields": {
+            "_id": "22",
+            "guid": "1e758a65-6049-4235-9a53-1f85fc847d8f",
+            "about": "Custom posters and banners for events, exhibitions, and promotions with your branding.",
+            "tags": ["posters", "event banners", "promotion", "exhibitions"],
+            "name": "Event Posters & Banners",
+            "description": "Custom posters and banners for events, exhibitions, and promotions with your branding.",
+            "price": 180.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 23,
+        "fields": {
+            "_id": "23",
+            "guid": "8a9fb742-44a5-441f-a0e6-5fa7a0d86302",
+            "about": "Interactive web design services tailored to your business’s needs, ensuring a unique online presence.",
+            "tags": ["web design", "interactive", "business websites"],
+            "name": "Interactive Web Design",
+            "description": "Interactive web design services tailored to your business’s needs, ensuring a unique online presence.",
+            "price": 800.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 24,
+        "fields": {
+            "_id": "24",
+            "guid": "3f5d6f7f-d24a-473f-b0a2-33f9a72cba27",
+            "about": "Tailored brand strategy consultation to align your vision with your market for effective business growth.",
+            "tags": ["branding", "consultation", "business strategy"],
+            "name": "Brand Strategy Consultation",
+            "description": "Tailored brand strategy consultation to align your vision with your market for effective business growth.",
+            "price": 1000.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 25,
+        "fields": {
+            "_id": "25",
+            "guid": "42b65c2c-bdf5-4a56-bc71-d62291be54ad",
+            "about": "Social media management services designed to elevate your online presence and engagement.",
+            "tags": ["social media", "online presence", "brand engagement"],
+            "name": "Social Media Management",
+            "description": "Social media management services designed to elevate your online presence and engagement.",
+            "price": 700.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 26,
+        "fields": {
+            "_id": "26",
+            "guid": "fd1faed0-83d0-4766-81a1-8ed29d7203fc",
+            "about": "High-quality business promotional videos for online marketing, product launches, and events.",
+            "tags": ["promotional videos", "marketing", "business", "video production"],
+            "name": "Promotional Video Production",
+            "description": "High-quality business promotional videos for online marketing, product launches, and events.",
+            "price": 1200.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 27,
+        "fields": {
+            "_id": "27",
+            "guid": "5b2fcbff-2289-4b44-93c3-cc2bc5d6886b",
+            "about": "Custom-designed email newsletters to boost your engagement and connect with your audience.",
+            "tags": ["email newsletters", "digital marketing", "engagement"],
+            "name": "Custom Email Newsletters",
+            "description": "Custom-designed email newsletters to boost your engagement and connect with your audience.",
+            "price": 250.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 28,
+        "fields": {
+            "_id": "28",
+            "guid": "924e5489-6f02-4e72-bf0f-e4ec6e7762a9",
+            "about": "Logo animation services to bring your brand to life with creative and dynamic visuals.",
+            "tags": ["logo animation", "branding", "creative video"],
+            "name": "Logo Animation",
+            "description": "Logo animation services to bring your brand to life with creative and dynamic visuals.",
+            "price": 450.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 29,
+        "fields": {
+            "_id": "29",
+            "guid": "0c7c4d11-1e8d-45ed-9f4d-cb394fd96bdf",
+            "about": "Custom brochure designs for marketing purposes, showcasing your products and services.",
+            "tags": ["brochures", "marketing", "design"],
+            "name": "Custom Brochure Designs",
+            "description": "Custom brochure designs for marketing purposes, showcasing your products and services.",
+            "price": 210.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 30,
+        "fields": {
+            "_id": "30",
+            "guid": "ec5d6d4c-8d2b-4d5f-9c33-e74103ed72f2",
+            "about": "Custom-designed invitation cards for weddings, birthdays, and special events, crafted with elegance and creativity.",
+            "tags": ["invitation cards", "custom design", "event stationery", "elegant design", "special occasions"],
+            "name": "Custom Invitation Cards",
+            "description": "Custom-designed invitation cards for weddings, birthdays, and special events, crafted with elegance and creativity.",
+            "price": 180.00,
+            "image_url": "http://placehold.it/32x32"
+        }
+    }
+]

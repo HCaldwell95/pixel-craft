@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-6">
+        <!-- Non-Automated Image Slideshow -->
+        <div id="productSlideshow" class="carousel slide" data-bs-ride="false">
+          <div class="carousel-inner" id="carouselImages">
+            {% for image in product.images.all %}
+              <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                <img src="{{ image.image_url }}" class="d-block w-100" alt="{{ product.name }}">
+              </div>
+            {% endfor %}
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#productSlideshow" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#productSlideshow" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <!-- Product Details -->
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.description }}</p>
+        <h4>${{ product.price }}</h4>
+        
+        <!-- Customization Dropdowns -->
+        <form id="productForm">
+          <div class="mb-3">
+            <label for="sizeSelect" class="form-label">Size</label>
+            <select class="form-select" id="sizeSelect" name="size">
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="colorSelect" class="form-label">Color</label>
+            <select class="form-select" id="colorSelect" name="color">
+              <option value="red">Red</option>
+              <option value="blue">Blue</option>
+              <option value="green">Green</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Add to Cart</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript to update the slideshow based on dropdown selection
+    const sizeSelect = document.getElementById('sizeSelect');
+    const colorSelect = document.getElementById('colorSelect');
+    
+    sizeSelect.addEventListener('change', updateSlideshow);
+    colorSelect.addEventListener('change', updateSlideshow);
+
+    function updateSlideshow() {
+      const selectedSize = sizeSelect.value;
+      const selectedColor = colorSelect.value;
+      
+      // Logic to update the images based on size/color (you would need to map this logic with your backend)
+      // Example: if size 'large' is selected, show the corresponding images
+      
+      // For now, we can reload the carousel with the same images
+      const carouselImages = document.getElementById('carouselImages');
+      // Clear existing images
+      carouselImages.innerHTML = '';
+
+      // Insert images dynamically based on the selection
+      // Example (you can replace this with actual dynamic data):
+      const newImage = document.createElement('div');
+      newImage.classList.add('carousel-item', 'active');
+      newImage.innerHTML = `<img src="path_to_new_image_based_on_selection.jpg" class="d-block w-100" alt="Updated Image">`;
+
+      carouselImages.appendChild(newImage);
+    }
+  </script>
+{% endblock %}

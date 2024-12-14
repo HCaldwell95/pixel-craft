@@ -27,7 +27,7 @@
 
     <section class="about-us-section py-5">
         <div class="container">
-            <h2 class="text-center mb-4 section-heading">About Us</h2>
+            <h2 class="text-center mb-4 text-black section-heading">About Us</h2>
             <p class="text-center">
                 At Pixel Craft, we are a team of passionate designers dedicated to helping brands communicate their vision 
                 through creative and innovative design solutions. 
@@ -85,15 +85,15 @@
             <!-- Portfolio Cards -->
             <div class="row">
                 {% for image in portfolio_images %}
-                    <div class="col-md-4 mb-4">
+                    <div class="col-12 col-md-6 col-lg-4 mb-4">
                         <!-- Portfolio Card -->
                         <a href="{{ image.link }}" class="portfolio-card">
                             <div class="card">
-                                <img src="{% static image.img_url %}" class="card-img-top" alt="Portfolio Image">
                                 <div class="card-body">
                                     <h5 class="card-title">{{ image.title }}</h5>
                                     <p class="card-text">{{ image.description }}</p>
                                 </div>
+                                <img src="{% static image.img_url %}" class="card-img-top" alt="Portfolio Image">
                             </div>
                         </a>
                     </div>
@@ -101,8 +101,5 @@
             </div>
         </div>
     </section>
-    
-    
-    
     
 {% endblock %}

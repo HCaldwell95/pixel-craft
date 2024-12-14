@@ -94,6 +94,11 @@ a {
     text-transform: uppercase;
 }
 
+.hero-heading {
+    color: #D0FFD1;
+    text-shadow: 5px 7px 0 #354F43;
+}
+
 .logo-img {
     height: auto;
     max-width: 200px;
@@ -107,6 +112,7 @@ a {
     background: black;
     color: white;
     min-width: 260px;
+    border: 2px ridge #D0FFD1;
 }
 
 .btn-black {

@@ -66,7 +66,7 @@
             {% include 'includes/mobile-top-header.html' %}
         </div>
 
-        <div id="delivery-banner" class="row text-center">
+        <div id="delivery-banner" class="row text-center d-none d-md-flex">
             <div class="col bg-black text-white">
                 <h4 class="logo-font my-1">Crafting Your Vision, Pixel by Pixel</h4>                
             </div>            
@@ -91,9 +91,9 @@
 
   <footer class="footer bg-offwhite py-5">
     <div class="container">
-        <div class="row text-center">
+        <div class="row text-center flex-column flex-md-row footer-container">
             <!-- Left Column: Studio Hours -->
-            <div class="col-md-4">
+            <div class="col-12 col-md-4 mb-4 mb-md-0 footer-hours">
                 <h5 class="footer-header">Studio Hours</h5>
                 <p>Mon-Fri: 9:00 AM - 6:00 PM</p>
                 <p>Sat: 10:00 AM - 4:00 PM</p>
@@ -107,17 +107,17 @@
             </div>
 
             <!-- Logo -->
-            <div class="col-md-4 my-auto">
+            <div class="col-12 col-md-4 mb-4 mb-md-0">
                 <a href="{% url 'home' %}" class="nav-link">
-                    <img src="{% static 'images/logo.png' %}" alt="Logo" class="footer-logo">
+                    <img src="{% static 'images/logo.png' %}" alt="Logo" class="footer-logo mx-auto d-block">
                 </a>
             </div>
 
             <!-- Right Column: About -->
-            <div class="col-md-4" id="footer-about">
+            <div class="col-12 col-md-4 footer-about">
                 <h5 class="footer-header">About</h5>
                 <p>We are a graphic design creation business, focusing on innovative designs for a variety of media. We create professional, unique designs that help brands stand out.</p>
-                <a href="" class="text-black">Diversity Policy</a>
+                <a href="#" class="text-black">Diversity Policy</a>
             </div>
         </div>
 
@@ -138,6 +138,8 @@
             </div>
         </div>
     </div>
-</footer>
+    </footer>
+
+
 
 </html>

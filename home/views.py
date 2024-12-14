@@ -81,6 +81,21 @@ def index(request):
             "title": "Business Cards",
             "description": "Professionally designed business cards."
         },
+        {
+        "img_url": "images/flyer-portfolio.png",
+        "title": "Flyer Design",
+        "description": "Eye-catching flyers that grab attention."
+        },
+        {
+            "img_url": "images/social-media-portfolio.png",
+            "title": "Social Media Graphics",
+            "description": "Engaging visuals for your social platforms."
+        },
+        {
+            "img_url": "images/stationary-portfolio.jpg",
+            "title": "Stationary Design",
+            "description": "Elegant stationary to elevate your brand."
+        },
     ]
 
     return render(request, 'home/index.html', {

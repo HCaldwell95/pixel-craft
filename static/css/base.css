@@ -69,9 +69,7 @@ a {
 
 .navbar-nav .nav-item {
     padding-left: 115px;
-
 }
-
 
 
 .fixed-top {
@@ -378,12 +376,75 @@ a.category-badge > span.badge:hover {
 
 @media (max-width: 767px) {
 
+    /* NavBar */
+
     .navbar-brand  {
         padding-left: 20px;
     }
 
+    .navbar-nav .nav-item:not(:first-child) {
+        border-left: none;
+    }
+    
+    .navbar-nav .nav-item {
+        padding-left: 0px;
+    }
+
+    /* About Us */
+    
+    .about-us-section p {
+        font-size: 16px;
+    }
+
+    /* Services Section */
+    
+    .services-section p {
+        font-size: 16px;
+    }
+    
+    .service-icon {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .service-title {
+        font-size: 1rem;
+    }
+
+    
+    /* ---------------------------------- Portfolio Section */
+    
+    .portfolio-section {
+        background-color: rgba(57, 83, 70, 0.9);
+        border-top: 5px groove #D0FFD1;
+    }
+
+    /* Hide portfolio cards beyond the 3rd on small screens */
+    .row .col-12:nth-of-type(n+4) {
+        display: none;
+    }
+
+    /* Ensure card image covers the card space */
+    .portfolio-card .card-img-top {
+        height: 450px;
+    }
+    
+    /* Style the card body */
+    .portfolio-card .card-body {
+        height: 90px;
+    }
+    
     /* ------------------------------------ Footer Styles */
 
+    .footer-container {
+        margin: 12px;
+    }
+
+    .footer-hours,
+    .footer-about {
+        margin: 0px;
+        padding: 0px;
+    }
 
     .footer-logo {
         max-width: 100px;
@@ -405,13 +466,46 @@ a.category-badge > span.badge:hover {
         margin: 5px 15px;
     }
 
-    #footer-about {
-        margin-right: 0.5em;
-    }
-
 }
 
 @media (min-width: 768px) {
+
+    .navbar-nav .nav-item:not(:first-child) {
+        border-left: none;
+    }
+    
+    .navbar-nav .nav-item {
+        padding-left: 0px;
+    }
+
+    .portfolio-section {
+        background-color: rgba(57, 83, 70, 0.9);
+        border-top: 5px groove #D0FFD1;
+    }
+
+    /* Portfolio Section */
+    
+    .portfolio-card .card-img-top {
+        height: 400px;
+    }
+    
+    /* Style the card body */
+    .portfolio-card .card-body {
+        height: 90px;
+    }
+
+    /* Centering card title and description */
+    .portfolio-card .card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #424242;
+}
+
+.portfolio-card .card-text {
+    font-size: 0.7rem;
+    color: #383838;
+}
 
 }
 

@@ -14,6 +14,26 @@
         }
     },
     {
+        "model": "products.productoption",
+        "pk": 1,
+        "fields": {
+          "product": 7,
+          "name": "Colour & Imagery",
+          "price": 20.00,
+          "description": "Vibrant and eye-catching poster prints that combine stunning colours with creative imagery. Perfect for adding a bold statement to your space, whether it’s for home décor, modern offices, or branding campaigns that demand attention."
+        }
+      },
+      {
+        "model": "products.productoption",
+        "pk": 1,
+        "fields": {
+          "product": 7,
+          "name": "Greyscale  & Imagery",
+          "price": 20.00,
+          "description": "Sleek and sophisticated poster prints in greyscale, blending sharp imagery with timeless monochrome tones. Ideal for creating a minimalist aesthetic or enhancing professional environments with understated elegance."
+        }
+      },
+    {
         "model": "products.product",
         "pk": 2,
         "fields": {
@@ -41,6 +61,36 @@
             "image_url": "http://placehold.it/32x32"
         }
     },
+    {
+        "model": "products.productoption",
+        "pk": 1,
+        "fields": {
+          "product": 7,
+          "name": "Paper Bags",
+          "price": 20.00,
+          "description": "40no Eco-friendly paper bags for packaging."
+        }
+      },
+      {
+        "model": "products.productoption",
+        "pk": 2,
+        "fields": {
+          "product": 7,
+          "name": "Cardboard Boxes",
+          "price": 50.00,
+          "description": "100no Durable cardboard boxes for shipping."
+        }
+      },
+      {
+        "model": "products.productoption",
+        "pk": 3,
+        "fields": {
+          "product": 7,
+          "name": "Labels",
+          "price": 15.00,
+          "description": "50no Customised labels for branding."
+        }
+      },      
     {
         "model": "products.product",
         "pk": 4,

@@ -105,3 +105,6 @@ def index(request):
 
 def diversity_policy(request):
     return render(request, 'home/diversity.html')
+
+def work_with_me(request):
+    return render(request, 'home/work-with-me.html')

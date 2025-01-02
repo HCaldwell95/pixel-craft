@@ -6,8 +6,12 @@ body {
     font-size: 18px;
 }
 
+#delivery-banner {
+    margin-top: 0.4em;
+}
+
 .core-page-section {
-    padding-top: 140px;
+    padding-top: 130px;
     font-size: 22px;
 }
 
@@ -31,8 +35,13 @@ h1, h2, p {
     padding-bottom: 0.5em;
 }
 
-.core-pages-ul {
+.core-page-ul {
     list-style-position: inside; /* Keeps list markers aligned with text */
     list-style-type:upper-roman;
     text-align: left;
+}
+
+.core-page-sub-ul {
+    list-style-type: none;
+    padding-top: 20px;
 }

@@ -19,7 +19,7 @@ body {
     font-size: 48px;
     text-transform: uppercase;
     letter-spacing: 2mm;
-    color: #616161;
+    color: #4f696d;
     text-shadow: 1px 1px 4px rgba(70, 128, 82, 0.3);
 }
 
@@ -27,7 +27,7 @@ section > h2 {
     font-size: 36px;
     letter-spacing: 1mm;
     padding: 1em;
-    background: linear-gradient(to right, #4f696d, #85b2b8); /* soft green gradient */
+    background: linear-gradient(to right, #4f696d, #85b2b8);
     -webkit-background-clip: text;
     color: transparent;
 }
@@ -49,6 +49,11 @@ h1, h2, p {
     text-align: left;
 }
 
+.core-page-ul-type-none {
+    list-style-type:none;
+    text-align: left;
+}
+
 .core-page-sub-ul {
     list-style-type: none;
     padding-top: 20px;
@@ -57,4 +62,14 @@ h1, h2, p {
 hr {
     width: 70%;
     margin: 0 auto;
+}
+
+label {
+    display: block; /* Makes label take up the full width */
+    text-align: left; /* Aligns the text to the left */
+    margin: 30px 5px; 
+}
+
+button {
+    margin-top: 20px;
 }

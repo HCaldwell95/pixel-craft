@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/core_pages.css' %}">
+{% endblock %}
+
+{% block extra_title %}
+    | Enquire
+{% endblock %}
+
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+    <section class="core-page-section container">
+        <h1>Enquire About Our Design Services</h1>
+        <p>Thank you for considering PixelCraft for your graphic design needs. We're excited to hear about your project and discuss how we can bring your vision to life. Please fill out the form below or get in touch with us through the provided contact details, and we’ll get back to you as soon as possible.</p>
+
+        <h2>Contact Form</h2>
+        <form action="{% url 'submit_enquiry' %}" method="POST">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="project_details">Project Details</label>
+                <textarea id="project_details" name="project_details" class="form-control" rows="5" placeholder="Please describe your project and any ideas or requirements" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="budget">Estimated Budget</label>
+                <input type="text" id="budget" name="budget" class="form-control" placeholder="Enter your budget for the project (optional)">
+            </div>
+
+            <div class="form-group">
+                <label for="timeline">Project Timeline</label>
+                <input type="text" id="timeline" name="timeline" class="form-control" placeholder="What is your desired timeline for completion?" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Enquiry</button>
+        </form>
+
+        <h2>Other Ways to Get in Touch</h2>
+        <p>If you prefer to reach out directly, you can contact us via email or phone:</p>
+        <ul class="core-page-ul-type-none">
+            <li><strong>Email:</strong> <a href="mailto:info@pixelcraft.co.uk">info@pixelcraft.co.uk</a></li>
+            <li><strong>Phone:</strong> +44 (0)123 456 7890</li>
+        </ul>
+
+        <br>
+        <p>We look forward to discussing how we can collaborate and bring your design ideas to life!</p>
+        <br>
+        <br>
+    </section>
+{% endblock %}

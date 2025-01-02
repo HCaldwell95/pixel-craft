@@ -118,3 +118,14 @@ def faq(request):
 
 def about(request):
     return render(request, 'home/about.html')
+
+def enquire(request):
+    return render(request, 'home/enquire.html')
+
+def submit_enquiry(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        # Handle the submission, like saving to the database or sending an email.
+        return HttpResponse("Thank you for your enquiry!")
+    return HttpResponse("Invalid request", status=400)

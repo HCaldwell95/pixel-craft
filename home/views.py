@@ -115,3 +115,6 @@ def experience(request):
 
 def faq(request):
     return render(request, 'home/faq.html')
+
+def about(request):
+    return render(request, 'home/about.html')

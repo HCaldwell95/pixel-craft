@@ -19,12 +19,17 @@ body {
     font-size: 48px;
     text-transform: uppercase;
     letter-spacing: 2mm;
+    color: #616161;
+    text-shadow: 1px 1px 4px rgba(70, 128, 82, 0.3);
 }
 
 section > h2 {
     font-size: 36px;
     letter-spacing: 1mm;
     padding: 1em;
+    background: linear-gradient(to right, #4f696d, #85b2b8); /* soft green gradient */
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 /* Center all text within the containers */

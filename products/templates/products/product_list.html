@@ -33,7 +33,10 @@
         {% for product in products %}
             <div class="col-12 col-md-6 col-lg-4 mb-4">
             <div class="card text-center">
-                <img src="{{ product.image_url }}" class="card-img-top" alt="{{ product.name }}">
+                <img src="{{ product.image_url }}" 
+                class="card-img-top" 
+                alt="Image of {{ product.name }} - {{ product.description }}" 
+                loading="lazy">
                 <div class="card-body">
                 <h5 class="card-title">{{ product.name }}</h5>
                 <p class="text-muted">From £{{ product.get_minimum_price }}</p>

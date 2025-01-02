@@ -11,6 +11,10 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)  # Price as decimal
     image_url = models.URLField(max_length=500, blank=True, null=True)  # Image URL
 
+    def get_minimum_price(self):
+        options_prices = self.options.values_list('price', flat=True)  # Get prices from options
+        return min(options_prices) if options_prices else self.price
+
 class ProductOption(models.Model):
     product = models.ForeignKey(Product, related_name='options', on_delete=models.CASCADE)
     name = models.CharField(max_length=255)

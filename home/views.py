@@ -45,10 +45,10 @@ def index(request):
             "icon": "images/social-media-design.png",
         },
         {
-            "title": "Brochure Design",
-            "cost": "From £200",
-            "description": "High-quality brochures to showcase your products or services.",
-            "icon": "images/brochure-design.png",
+            "title": "Custom Prints",
+            "cost": "From £100",
+            "description": "High-quality custom prints to bring your designs to life.",
+            "icon": "images/custom-prints.png"
         },
         {
             "title": "Flyer Design",

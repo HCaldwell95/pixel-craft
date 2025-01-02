@@ -1,0 +1,38 @@
+body {
+    background: #fff; /* Sets a white background */
+    background-image: none; /* Ensures no background image is displayed */
+    color: #555;
+    font-family: 'Lato';
+    font-size: 18px;
+}
+
+.core-page-section {
+    padding-top: 140px;
+    font-size: 22px;
+}
+
+.core-page-section > h1 {
+    font-size: 48px;
+    text-transform: uppercase;
+}
+
+section > h2 {
+    font-size: 36px;
+}
+
+/* Center all text within the containers */
+.container {
+    text-align: center;
+}
+
+/* Ensure headers and paragraphs are also centered */
+h1, h2, p {
+    text-align: center;
+    padding-bottom: 0.5em;
+}
+
+.core-pages-ul {
+    list-style-position: inside; /* Keeps list markers aligned with text */
+    list-style-type:upper-roman;
+    text-align: left;
+}

@@ -102,3 +102,6 @@ def index(request):
     "services": services,
     "portfolio_images": portfolio_images,
     })
+
+def diversity_policy(request):
+    return render(request, 'home/diversity.html')

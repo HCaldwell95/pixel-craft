@@ -111,3 +111,7 @@ def work_with_me(request):
 
 def experience(request):
     return render(request, 'home/experience.html')
+
+
+def faq(request):
+    return render(request, 'home/faq.html')

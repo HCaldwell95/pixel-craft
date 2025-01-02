@@ -1,0 +1,5 @@
+.card-img-top {
+    height: 300px; /* Adjust the height to the desired size */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+

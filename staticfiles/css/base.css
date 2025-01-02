@@ -8,103 +8,23 @@ body {
     font-family: 'Lato';
 }
 
-/* Top Nav Styling */
-
-#topnav .main-logo-link h2 {
-    font-family: 'Arial', sans-serif;  /* Example for logo font */
-    color: #fff;
-    font-size: 1.5rem;
-}
-
-/* Search Box Styling */
-#topnav .input-group {
-    max-width: 350px;
-    margin: 0 auto;
-}
-
-#topnav .input-group input {
-    border-radius: 0;
-    border-color: #000;
-}
-
-/* Account Menu Styling */
-#topnav .dropdown-menu {
-    background-color: #F9F9F9;
-    border-radius: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#topnav .dropdown-menu a {
-    color: #333;
-}
-
-/* Navbar Styling */
-.navbar {
-    background-color: #F9F9F9;
-    padding: 0;
-}
-
-.navbar-toggler {
-    border: none;
-}
-
-.navbar-brand  {
-    padding-left: 50px;
-}
-
-
-/* ------------------------ Navbar separation borders */
-.navbar-nav {
-    display: flex;
-}
-
-/* Add borders between nav items */
-.navbar-nav .nav-item:not(:first-child) {
-    border-left: 1px solid #ccc; /* Adds a border starting from "Products" */
-}
-
-.navbar-nav .nav-item {
-    padding-left: 115px;
-
-}
 
 
 
-.fixed-top {
-    padding: 0.5em 0;
-}
 
-#delivery-banner {
-    margin-top: 1em;
-    position: relative;
-}
 
-/* from Bulma */
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
+
+
+
+/* General Styles */
+
+.hero-heading {
+    color: #D0FFD1;
+    text-shadow: 5px 7px 0 #354F43;
 }
 
 .logo-font {
     text-transform: uppercase;
-}
-
-.logo-img {
-    height: auto;
-    max-width: 200px;
-}
-
-.main-logo-link {
-    width: fit-content;
-}
-
-.shop-now-button {
-    background: black;
-    color: white;
-    min-width: 260px;
 }
 
 .btn-black {
@@ -112,14 +32,8 @@ body {
     color: white;
 }
 
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
-    color: white;
+a {
+    text-decoration: none;
 }
 
 .text-black {
@@ -171,178 +85,79 @@ a.category-badge > span.badge:hover {
     text-transform: uppercase;
 }
 
-/* ------------------------------------- Home Styles */
-
-.about-us-section {
-    background-color: rgba(255, 255, 255, 0.9);
-    border-top: 5px groove #D0FFD1;
-}
-
-.about-us-section p {
-    font-size: 28px;
-}
-
-.services-section {
-    background-color: rgba(0, 0, 0, 0.9);
-    border-top: 5px ridge #D0FFD1;
-}
-
-.services-section h3 {
-    font-size: 24px;
-}
-
-.services-section p {
-    font-size: 20px;
-}
-
-.service-icon {
-    width: 150px;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 15px;
-    background: #ffffff;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.service-icon img {
-    width: 65%;
-    height: 65%;
-    object-fit: contain;
-    position: relative;
-    z-index: 999;
-    border-radius: 0!important;
-}
-
-.service-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin: 10px 0;
-    color: #a8a8a8;
-    letter-spacing: 1mm;
-}
-
-.service-cost {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #a8a8a8;
-}
-
-.service-description {
-    font-size: 0.9rem;
-    color: #c7c7c7;
-}
-
-.service-link {
-    text-decoration: none;
-}
-
-/* ---------------------------------- Carousel Styles */
-
-.portfolio-carousel {
-    background-color: rgba(255, 255, 255, 0.9);
-    border-top: 5px groove #D0FFD1;
-}
-
-.portfolio-carousel .carousel-inner {
-    display: flex;
-    justify-content: center;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: none;
-}
-
-.card-img-top {
-    width: 100%;
-    height: 75%;
-    object-fit: cover; /* This ensures the image fills the top part of the card without distorting */
-}
-
-.card-body {
-    padding: 15px;
-}
-
-.carousel-control-prev-icon, .carousel-control-next-icon {
-    background-color: black; /* Customize the color of the control buttons */
-}
-
-
-
-/* ------------------------------------ Footer Styles */
-
-.footer {
-    background-color: #f9f9f9; /* Off-white background */
-}
-
-.footer-header {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.footer-logo {
-    max-width: 200px;
-    height: auto;
-}
-
-.social-links a {
-    font-size: 1.5rem;
-    margin: 0 7.5px;
-    color: #333;
-    text-decoration: none;
-}
-
-.social-links a:hover {
-    color: #007bff;
-}
-
-.footer-divider {
-    border-top: 1px solid #ccc;
-    margin: 30px 0;
-}
-
-.footer-links {
-    margin-top: 20px;
-    padding-left: 0;
-}
-
-.footer-links li {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-.footer-links a {
-    color: #333;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.footer-links a:hover {
-    color: #007bff;
-}
-
-
-
-
-
-
-
 /* -------------------------------- Media Queries */
 
 @media (max-width: 767px) {
+
+    /* NavBar */
 
     .navbar-brand  {
         padding-left: 20px;
     }
 
+    .navbar-nav .nav-item:not(:first-child) {
+        border-left: none;
+    }
+    
+    .navbar-nav .nav-item {
+        padding-left: 0px;
+    }
+
+    /* About Us */
+    
+    .about-us-section p {
+        font-size: 16px;
+    }
+
+    /* Services Section */
+    
+    .services-section p {
+        font-size: 16px;
+    }
+    
+    .service-icon {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .service-title {
+        font-size: 1rem;
+    }
+
+    
+    /* ---------------------------------- Portfolio Section */
+    
+    .portfolio-section {
+        background-color: rgba(57, 83, 70, 0.9);
+        border-top: 5px groove #D0FFD1;
+    }
+
+    /* Hide portfolio cards beyond the 3rd on small screens */
+    .row .col-12:nth-of-type(n+4) {
+        display: none;
+    }
+
+    /* Ensure card image covers the card space */
+    .portfolio-card .card-img-top {
+        height: 450px;
+    }
+    
+    /* Style the card body */
+    .portfolio-card .card-body {
+        height: 90px;
+    }
+    
     /* ------------------------------------ Footer Styles */
 
+    .footer-container {
+        margin: 12px;
+    }
+
+    .footer-hours,
+    .footer-about {
+        margin: 0px;
+        padding: 0px;
+    }
 
     .footer-logo {
         max-width: 100px;
@@ -364,13 +179,46 @@ a.category-badge > span.badge:hover {
         margin: 5px 15px;
     }
 
-    #footer-about {
-        margin-right: 0.5em;
-    }
-
 }
 
 @media (min-width: 768px) {
+
+    .navbar-nav .nav-item:not(:first-child) {
+        border-left: none;
+    }
+    
+    .navbar-nav .nav-item {
+        padding-left: 0px;
+    }
+
+    .portfolio-section {
+        background-color: rgba(57, 83, 70, 0.9);
+        border-top: 5px groove #D0FFD1;
+    }
+
+    /* Portfolio Section */
+    
+    .portfolio-card .card-img-top {
+        height: 400px;
+    }
+    
+    /* Style the card body */
+    .portfolio-card .card-body {
+        height: 90px;
+    }
+
+    /* Centering card title and description */
+    .portfolio-card .card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #424242;
+}
+
+.portfolio-card .card-text {
+    font-size: 0.7rem;
+    color: #383838;
+}
 
 }
 

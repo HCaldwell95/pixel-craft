@@ -1,0 +1,77 @@
+/* Top Nav Styling */
+
+#topnav .main-logo-link h2 {
+    font-family: 'Arial', sans-serif;  /* Example for logo font */
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+/* Search Box Styling */
+
+#topnav .input-group {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+#topnav .input-group input {
+    border-radius: 0;
+    border-color: #000;
+}
+
+/* Account Menu Styling */
+
+#topnav .dropdown-menu {
+    background-color: #F9F9F9;
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#topnav .dropdown-menu a {
+    color: #333;
+}
+
+/* Navbar Styling */
+
+.navbar {
+    background-color: #F9F9F9;
+    padding: 0;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-brand  {
+    padding-left: 50px;
+}
+
+.fixed-top {
+    padding: 0.5em 0;
+}
+
+#delivery-banner {
+    margin-top: 1em;
+    position: relative;
+}
+
+.logo-img {
+    height: auto;
+    max-width: 200px;
+}
+
+/* Navbar separation borders */
+
+.navbar-nav {
+    display: flex;
+}
+
+/* Add borders between nav items */
+.navbar-nav .nav-item:not(:first-child) {
+    border-left: 1px solid #ccc; /* Adds a border starting from "Products" */
+}
+
+.navbar-nav .nav-item {
+    padding-left: 115px;
+}
+
+

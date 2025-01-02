@@ -10,7 +10,7 @@
             "name": "Poster Prints",
             "description": "High-quality poster prints designed with precision and creativity. Perfect for modern interiors and businesses looking for unique branding.",
             "price": 200.00,
-            "image_url": "http://placehold.it/32x32"
+            "image_url": "https://res.cloudinary.com/ddj2rpxcb/image/upload/v1735821201/p-poster-prints_amogva.jpg"
         }
     },
     {
@@ -19,7 +19,7 @@
         "fields": {
           "product": 7,
           "name": "Colour & Imagery",
-          "price": 20.00,
+          "price": 35.00,
           "description": "Vibrant and eye-catching poster prints that combine stunning colours with creative imagery. Perfect for adding a bold statement to your space, whether it’s for home décor, modern offices, or branding campaigns that demand attention."
         }
       },
@@ -44,7 +44,7 @@
             "name": "Stationery Set",
             "description": "Elegant stationery sets featuring personalised designs for businesses and individuals, perfect for leaving a lasting impression.",
             "price": 340.00,
-            "image_url": "http://placehold.it/32x32"
+            "image_url": "https://res.cloudinary.com/ddj2rpxcb/image/upload/v1735821201/p-stationary-set_yv3tpt.jpg"
         }
     },
     {
@@ -58,7 +58,7 @@
             "name": "Custom Graphic T-Shirts",
             "description": "Custom graphic t-shirts with artistic designs that express individuality and style.",
             "price": 185.00,
-            "image_url": "http://placehold.it/32x32"
+            "image_url": "https://res.cloudinary.com/ddj2rpxcb/image/upload/v1735821213/p-graphic-tshirt_qeg9dv.jpg"
         }
     },
     {
@@ -102,7 +102,7 @@
             "name": "Logo Designs",
             "description": "Eye-catching logo designs that define your brand and leave a memorable impression.",
             "price": 300.00,
-            "image_url": "http://placehold.it/32x32"
+            "image_url": "https://res.cloudinary.com/ddj2rpxcb/image/upload/v1735821202/p-logo-design_stvmll.jpg"
         }
     },
     {
@@ -116,7 +116,7 @@
             "name": "Premium Business Cards",
             "description": "Premium business cards featuring unique textures and designs to make your brand stand out.",
             "price": 200.00,
-            "image_url": "http://placehold.it/32x32"
+            "image_url": "https://res.cloudinary.com/ddj2rpxcb/image/upload/v1735821210/p-business-card-qr_lbt9uq.jpg"
         }
     },
     {
@@ -130,7 +130,7 @@
             "name": "Wall Art Prints",
             "description": "Unique wall art prints, blending artistic vision and modern aesthetics to enhance your living space.",
             "price": 150.00,
-            "image_url": "http://placehold.it/32x32"
+            "image_url": "https://res.cloudinary.com/ddj2rpxcb/image/upload/v1735821201/p-wall-art-one_qszwzk.jpg"
         }
     },
     {
@@ -144,7 +144,7 @@
             "name": "Packaging Design",
             "description": "Innovative packaging design that captures your product’s story and appeals to your audience.",
             "price": 200.00,
-            "image_url": "http://placehold.it/32x32"
+            "image_url": "https://res.cloudinary.com/ddj2rpxcb/image/upload/v1735821218/p-packaging-box-one_bi6pfs.jpg"
         }
     },
     {
@@ -158,7 +158,7 @@
             "name": "Social Media Templates",
             "description": "Personalised social media templates designed for seamless branding and impactful online presence.",
             "price": 220.00,
-            "image_url": "http://placehold.it/32x32"
+            "image_url": "https://res.cloudinary.com/ddj2rpxcb/image/upload/v1735821206/p-social-media-template_svyhjq.jpg"
         }
     },
     {
@@ -172,7 +172,7 @@
             "name": "Typography Art Prints",
             "description": "Bold typography art prints, perfect for creative spaces and modern decor.",
             "price": 125.00,
-            "image_url": "http://placehold.it/32x32"
+            "image_url": "https://res.cloudinary.com/ddj2rpxcb/image/upload/v1735821209/p-typography-one_ogcckt.jpg"
         }
     },
     {
@@ -186,7 +186,7 @@
             "name": "Creative Brochure Designs",
             "description": "Creative brochure designs tailored to highlight your services and engage your audience.",
             "price": 175.00,
-            "image_url": "http://placehold.it/32x32"
+            "image_url": "https://res.cloudinary.com/ddj2rpxcb/image/upload/v1735821202/p-brochure-design-one_wfvm8m.jpg"
         }
     },
     {
@@ -200,7 +200,7 @@
             "name": "Business Stationery",
             "description": "Stylish business stationery, including letterheads and envelopes for a professional presentation.",
             "price": 150.00,
-            "image_url": "http://placehold.it/32x32"
+            "image_url": "https://res.cloudinary.com/ddj2rpxcb/image/upload/v1735821205/p-business-stationary-planners_v1ehsf.jpg"
         }
     },
     {
@@ -214,7 +214,7 @@
             "name": "Custom Business Flyers",
             "description": "Customisable business flyers to promote your services with eye-catching designs.",
             "price": 120.00,
-            "image_url": "http://placehold.it/32x32"
+            "image_url": "https://res.cloudinary.com/ddj2rpxcb/image/upload/v1735821208/p-business-flyers_ex6jct.jpg"
         }
     },
     {

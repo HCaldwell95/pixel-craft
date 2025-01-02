@@ -108,3 +108,6 @@ def diversity_policy(request):
 
 def work_with_me(request):
     return render(request, 'home/work-with-me.html')
+
+def experience(request):
+    return render(request, 'home/experience.html')

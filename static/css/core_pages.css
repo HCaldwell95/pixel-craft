@@ -66,6 +66,51 @@ hr {
     margin: 0 auto;
 }
 
+/* Portfolio-specific styles */
+.portfolio-details {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.portfolio {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.portfolio, .blog-post h2 {
+    margin-top: 0;
+    font-size: 24px;
+    background: linear-gradient(to right, #4f696d, #85b2b8);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.portfolio p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.portfolio-image {
+    max-width: 100%;
+    max-height: 600px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    object-fit: fill;
+}
+
+
+
+/* Enquire-specific styles */
+
 label {
     display: block; /* Makes label take up the full width */
     text-align: left; /* Aligns the text to the left */
@@ -75,6 +120,8 @@ label {
 button {
     margin-top: 20px;
 }
+
+
 
 /* Blog-specific styles */
 

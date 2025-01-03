@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/core_pages.css' %}">
+{% endblock %}
+
+{% block extra_title %}
+    | Portfolio
+{% endblock %}
+
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+    <section class="core-page-section container">
+        <h1>Our Portfolio</h1>
+        <p>Discover our completed projects and the creative solutions we’ve delivered for our clients. From logos to websites, each piece demonstrates our commitment to excellence in graphic design.</p>
+
+        <div class="portfolio-details">
+            <article class="portfolio">
+                <h2><strong>Logo Design</strong></h2>
+                <img src="{% static 'images/logo-portfolio.jpg' %}" alt="Logo Design" class="portfolio-image">
+                <h2>How It Was Made</h2>
+                <p>
+                    We worked closely with the client to understand their brand values, target audience, and vision. After several brainstorming sessions, 
+                    we crafted a minimalist yet impactful logo using Adobe Illustrator, focusing on clean lines and bold typography.
+                </p>
+                <h2>Client Expectations</h2>
+                <p>
+                    The client requested a modern logo with a strong focus on visuals to showcase their portfolio. 
+                    They also wanted the logo to be mobile-friendly and easy to update.
+                </p>
+            </article>
+
+            <article class="portfolio">
+                <h2><strong>Website Design</strong></h2>
+                <img src="{% static 'images/website-portfolio.png' %}" alt="Website Design" class="portfolio-image">
+                <h2>How It Was Made</h2>
+                <p>
+                    We designed and developed a fully responsive website using HTML, CSS, and JavaScript, incorporating 
+                    a sleek, user-friendly interface. The design was complemented with SEO optimization and integrated analytics.
+                </p>
+                <h2>Client Expectations</h2>
+                <p>
+                    The client requested a sleek, responsive website, designed to elevate user experience and enhance engagement for a wide audience. 
+                    They also wanted the site to be mobile-friendly and easy to update.
+                </p>
+            </article>
+
+            <article class="portfolio">
+                <h2><strong>Business Cards</strong></h2>
+                <img src="{% static 'images/business-card-portfolio.jpg' %}" alt="Business Cards" class="portfolio-image">
+                <h2>How It Was Made</h2>
+                <p>
+                    The business cards were designed using Adobe InDesign, with an emphasis on typography and color harmony. We used high-quality 
+                    card stock with a matte finish for a professional touch.
+                </p>
+                <h2>Client Expectations</h2>
+                <p>
+                    The client wanted sleek, professional business cards that reflected their brand identity and made a lasting impression 
+                    during networking events.
+                </p>
+            </article>
+
+            <article class="portfolio">
+                <h2><strong>Flyer Design</strong></h2>
+                <img src="{% static 'images/flyer-portfolio.png' %}" alt="Flyer Design" class="portfolio-image">
+                <h2>How It Was Made</h2>
+                <p>
+                    The flyer was designed using Adobe Photoshop and Illustrator, combining vibrant visuals and concise, compelling copy. 
+                    The layout was optimized for readability and visual impact.
+                </p>
+                <h2>Client Expectations</h2>
+                <p>
+                    The client needed an eye-catching flyer for an upcoming event, focusing on grabbing attention and 
+                    conveying key details effectively.
+                </p>
+            </article>
+
+            <article class="portfolio">
+                <h2><strong>Social Media Graphics</strong></h2>
+                <img src="{% static 'images/social-media-portfolio.png' %}" alt="Social Media Graphics" class="portfolio-image">
+                <h2>How It Was Made</h2>
+                <p>
+                    Using Canva and Adobe Photoshop, we created a series of engaging visuals tailored for platforms like Instagram and Facebook. 
+                    The designs incorporated the client's branding elements for consistency.
+                </p>
+                <h2>Client Expectations</h2>
+                <p>
+                    The client aimed to boost their social media presence with visually appealing posts that resonated with their audience 
+                    and encouraged engagement.
+                </p>
+            </article>
+
+            <article class="portfolio">
+                <h2><strong>Stationary Design</strong></h2>
+                <img src="{% static 'images/stationary-portfolio.jpg' %}" alt="Stationary Design" class="portfolio-image">
+                <h2>How It Was Made</h2>
+                <p>
+                    The stationary set, including letterheads and envelopes, was designed using Adobe InDesign. We focused on clean, 
+                    elegant designs that emphasized the client's branding.
+                </p>
+                <h2>Client Expectations</h2>
+                <p>
+                    The client wanted a cohesive set of stationary that reflected their brand professionalism and could be used 
+                    for official correspondence.
+                </p>
+            </article>
+
+            <p>Interested in working with us? <a href="{% url 'enquire' %}">Get in touch</a> to start your project today!</p>
+        </div>
+    </section>
+{% endblock %}

@@ -1,5 +1,56 @@
+body {
+    background: url("/media/products-background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #555;
+}
+
+.hero-heading {
+    color: #D0FFD1;
+    text-shadow: 10px 14px #000000;
+}
+
 .card-img-top {
     height: 300px; /* Adjust the height to the desired size */
     object-fit: cover; /* Ensures the image covers the area without distortion */
 }
 
+.transparent-container-fw  {
+    background-color: rgba(0, 0, 0, 0.8);  /* Transparent grey background */
+    width: 100%;
+    margin-bottom: -0.021px;
+}
+
+.section-diagonal-border {
+    background-image: url('your-background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    position: relative;
+}
+
+.section-diagonal-border::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.5) 50%, transparent 90%);
+    transform: skewY(24deg);  /* Create the diagonal effect */
+    z-index: 1;
+}
+
+.products-container h2 {
+    margin-top: 0;
+    font-size: 64px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5mm;
+    padding-bottom: 25px;
+    background: linear-gradient(to right, #ffffff, #00f5d4);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}

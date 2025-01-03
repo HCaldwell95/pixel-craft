@@ -9,13 +9,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
 /* General Styles */
 
 .hero-heading {
@@ -30,6 +23,11 @@ body {
 .btn-black {
     background: black;
     color: white;
+}
+
+.transparent-background {
+    background-color: rgba(0, 0, 0, 0.5);  /* Transparent grey background */
+    width: 100%;
 }
 
 a {

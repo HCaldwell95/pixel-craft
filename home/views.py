@@ -69,34 +69,41 @@ def index(request):
         {
             "img_url": "images/logo-portfolio.jpg",
             "title": "Logo Design",
-            "description": "A stunning logo for a modern brand."
+            "description": "A stunning logo for a modern brand.",
+            "url": "/portfolio/#logo-design-portfolio"
         },
         {
             "img_url": "images/website-portfolio.png",
             "title": "Website Design",
-            "description": "A sleek, responsive website design."
+            "description": "A sleek, responsive website design.",
+            "url": "/portfolio/#website-design-portfolio"
         },
         {
             "img_url": "images/business-card-portfolio.jpg",
             "title": "Business Cards",
-            "description": "Professionally designed business cards."
+            "description": "Professionally designed business cards.",
+            "url": "/portfolio/#business-card-portfolio"
         },
         {
-        "img_url": "images/flyer-portfolio.png",
-        "title": "Flyer Design",
-        "description": "Eye-catching flyers that grab attention."
+            "img_url": "images/flyer-portfolio.png",
+            "title": "Flyer Design",
+            "description": "Eye-catching flyers that grab attention.",
+            "url": "/portfolio/#flyer-portfolio"
         },
         {
             "img_url": "images/social-media-portfolio.png",
             "title": "Social Media Graphics",
-            "description": "Engaging visuals for your social platforms."
+            "description": "Engaging visuals for your social platforms.",
+            "url": "/portfolio/#social-media-portfolio"
         },
         {
             "img_url": "images/stationary-portfolio.jpg",
             "title": "Stationary Design",
-            "description": "Elegant stationary to elevate your brand."
+            "description": "Elegant stationary to elevate your brand.",
+            "url": "/portfolio/#stationary-portfolio"
         },
     ]
+
 
     return render(request, 'home/index.html', {
     "services": services,

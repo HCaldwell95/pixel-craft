@@ -129,3 +129,6 @@ def submit_enquiry(request):
         # Handle the submission, like saving to the database or sending an email.
         return HttpResponse("Thank you for your enquiry!")
     return HttpResponse("Invalid request", status=400)
+
+def blog(request):
+    return render(request, 'home/blog.html')

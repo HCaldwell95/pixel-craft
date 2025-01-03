@@ -29,6 +29,8 @@ section > h2 {
     padding: 1em;
     background: linear-gradient(to right, #4f696d, #85b2b8);
     -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
     color: transparent;
 }
 
@@ -72,4 +74,40 @@ label {
 
 button {
     margin-top: 20px;
+}
+
+/* Blog-specific styles */
+
+.blog-post {
+    background: #f9f9f9;
+    margin-bottom: 20px;
+    padding: 28px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h2 {
+    margin-top: 0;
+    font-size: 24px;
+    background: linear-gradient(to right, #4f696d, #85b2b8);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.blog-post p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.blog-post a {
+    color: #8443aa;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1mm;
+}
+
+.blog-post a:hover {
+    text-decoration: underline;
 }

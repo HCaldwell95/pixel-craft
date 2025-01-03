@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/core_pages.css' %}">
+{% endblock %}
+
+{% block extra_title %}
+    | Blog
+{% endblock %}
+
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+    <section class="core-page-section container">
+        <h1>Our Blog</h1>
+        <p>Welcome to the PixelCraft blog! Here, we share insights, tips, and trends in the world of graphic design. Stay inspired and informed as we explore the art and business of design.</p>
+
+        <div class="blog-post">
+            <h2>Design Trends to Watch in 2025</h2>
+            <p><small>Posted on November 4, 2024</small></p>
+            <p>Discover the design trends that will dominate 2025, from bold gradients to minimalist typography.</p>
+            <a href="https://www.creativeboom.com/features/what-emerging-trends-will-be-big-in-2025-we-asked-creative-leaders-for-their-predictions/">Read More &raquo;</a>
+        </div>
+
+        <div class="blog-post">
+            <h2>How to Build a Strong Brand Identity</h2>
+            <p><small>Posted on April 25, 2019</small></p>
+            <p>Learn the key elements of a memorable brand identity and how they can elevate your business.</p>
+            <a href="https://www.forbes.com/councils/forbescoachescouncil/2019/04/25/13-effective-methods-to-help-you-build-a-strong-brand-identity/">Read More &raquo;</a>
+        </div>
+
+        <div class="blog-post">
+            <h2>Why Graphic Design Matters for Small Businesses</h2>
+            <p><small>Posted on December 10, 2024</small></p>
+            <p>Explore why investing in good design is crucial for small businesses and their growth.</p>
+            <a href="https://designaphy.com/insights/graphic-design-for-startups-and-sme">Read More &raquo;</a>
+        </div>
+    </section>
+{% endblock %}

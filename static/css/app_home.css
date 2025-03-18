@@ -25,7 +25,8 @@
 }
 
 .about-us-section p {
-    font-size: 28px;
+    font-size: 22px;
+    margin: 0px 1em;
 }
 
 /* ------------------------------------------ Services Section */
@@ -150,7 +151,3 @@
     justify-content: space-between;
 }
 
-.col-md-4 {
-    flex: 1;
-    margin: 0 10px;
-}

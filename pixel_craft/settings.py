@@ -36,6 +36,9 @@ ALLOWED_HOSTS = [
     'pixel-craft.herokuapp.com',
     '8000-hcaldwell95-pixelcraft-rdfd19xyzal.ws.codeinstitute-ide.net',
     '8000-hcaldwell95-pixelcraft-eokyt2ue3qq.ws.codeinstitute-ide.net',
+    "8000-hcaldwell95-pixelcraft-cyq6k6xeqze.ws-eu118.gitpod.io",
+    "localhost",
+    "127.0.0.1"
 ]
 
 CSRF_TRUSTED_ORIGINS = [

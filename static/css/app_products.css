@@ -54,3 +54,17 @@ body {
     background-clip: text;
     color: transparent;
 }
+
+/* ------------------------------------ Product Detail Styles */
+
+.product-details {
+    padding-top: 300px;
+    padding-bottom: 200px;
+}
+
+.product-description {
+    background-color: white;
+    padding: 100px;
+    border-radius: 40px;
+    border: 10px black double;
+}

@@ -34,9 +34,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'pixel-craft.herokuapp.com',
-    '8000-hcaldwell95-pixelcraft-rdfd19xyzal.ws.codeinstitute-ide.net',
-    '8000-hcaldwell95-pixelcraft-eokyt2ue3qq.ws.codeinstitute-ide.net',
-    "8000-hcaldwell95-pixelcraft-cyq6k6xeqze.ws-eu118.gitpod.io",
+    '8000-hcaldwell95-pixelcraft-hynv8epul44.ws-eu118.gitpod.io',
     "localhost",
     "127.0.0.1"
 ]

@@ -1,11 +1,29 @@
 
+@font-face {
+    font-family: 'Cormorant';
+    src: url('../fonts/Cormorant-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Italiana';
+    src: url('../fonts/Italiana-Regular.ttf') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Audiowide';
+    src: url('../fonts/Audiowide-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
 
 body {
     background: url("/media/home-background.jpg") no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
-    font-family: 'Lato';
+    font-family: 'Lato', serif;
 }
 
 
@@ -14,6 +32,7 @@ body {
 .hero-heading {
     color: #D0FFD1;
     text-shadow: 5px 7px 0 #354F43;
+    font-family: 'Audiowide', serif;
 }
 
 .logo-font {
@@ -79,6 +98,7 @@ a.category-badge > span.badge:hover {
 
 .section-heading {
     font-weight: 700;
+    font-family: 'Audiowide', serif;
     letter-spacing: 2mm;
     text-transform: uppercase;
 }

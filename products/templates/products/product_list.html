@@ -39,7 +39,7 @@
             {% for product in products %}
                 <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <div class="card text-center">
-                    <img src="{{ product.image_url }}" 
+                    <img src="{{ product.image_url }}?q_auto,f_auto,c_fill,w_300,h_300" 
                     class="card-img-top" 
                     alt="Image of {{ product.name }} - {{ product.description }}" 
                     loading="lazy">

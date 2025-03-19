@@ -19,48 +19,56 @@ def index(request):
             "cost": "From £300",
             "description": "Create a unique logo that represents your brand identity.",
             "icon": "images/logo-design.png",
+            "product_id": "4",
         },
         {
             "title": "Website Design",
             "cost": "From £480",
             "description": "Professional and responsive websites tailored to your needs.",
             "icon": "images/website-design.png",
+            "product_id": "23",
         },
         {
             "title": "Stationary Design",
             "cost": "£150",
             "description": "Beautiful and professional stationary for your business.",
             "icon": "images/stationary-design.png",
+            "product_id": "2",
         },
         {
             "title": "Business Cards",
             "cost": "£80",
             "description": "Custom-designed business cards that leave a lasting impression.",
             "icon": "images/business-card-design.png",
+            "product_id": "5",
         },
         {
             "title": "Social Media Graphics",
             "cost": "From £120",
             "description": "Eye-catching graphics tailored for your social media platforms.",
             "icon": "images/social-media-design.png",
+            "product_id": "8",
         },
         {
             "title": "Custom Prints",
             "cost": "From £100",
             "description": "High-quality custom prints to bring your designs to life.",
-            "icon": "images/custom-prints.png"
+            "icon": "images/custom-prints.png",
+            "product_id": "3",
         },
         {
             "title": "Flyer Design",
             "cost": "£100",
             "description": "Creative flyer designs to effectively showcase your brand or event.",
             "icon": "images/flyer-design.png",
+            "product_id": "12",
         },
         {
             "title": "Packaging Design",
             "cost": "From £250",
             "description": "Unique and functional packaging design for your products.",
             "icon": "images/packaging-design.png",
+            "product_id": "7",
         },
     ]
 

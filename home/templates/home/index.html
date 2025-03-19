@@ -66,7 +66,7 @@
             <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
                 {% for service in services %}
                 <div class="col text-center">
-                    <a href="" class="service-link">
+                    <a href="{% url 'product_detail' service.product_id %}" class="service-link">
                         <div class="service-item">
                             <div class="service-icon">
                                 <img src="{% static service.icon %}" alt="{{ service.title }}" class="img-fluid rounded-circle">

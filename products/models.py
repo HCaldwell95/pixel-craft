@@ -15,6 +15,9 @@ class Product(models.Model):
         options_prices = self.options.values_list('price', flat=True)  # Get prices from options
         return min(options_prices) if options_prices else self.price
 
+    def __str__(self):
+        return self.name
+
 class ProductOption(models.Model):
     product = models.ForeignKey(Product, related_name='options', on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
@@ -22,4 +25,4 @@ class ProductOption(models.Model):
     description = models.TextField(blank=True, null=True)
 
     def __str__(self):
-        return f"{self._id} - {self.guid}"
+        return self.name

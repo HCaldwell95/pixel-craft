@@ -187,4 +187,7 @@ CLOUDINARY_STORAGE = {
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # allauth
-LOGIN_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'accounts:profile'
+
+# Set the custom user model to be used for authentication (instead of the default Django User model)
+AUTH_USER_MODEL = 'accounts.CustomUser'

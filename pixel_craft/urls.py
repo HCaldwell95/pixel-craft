@@ -9,7 +9,7 @@ urlpatterns = [
     path('', include('home.urls')),
     path('products/', include('products.urls')),
     path('orders/', include('orders.urls')),
-    path('accounts/', include('accounts.urls')),  # Include the accounts URLs
+    path('accounts/', include('allauth.urls')),  # Include the accounts URLs
     path('profile/', views.profile, name='profile'),  # Profile view
 ]
 

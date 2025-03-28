@@ -1,6 +1,23 @@
-<h2>Sign Up</h2>
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Sign Up</button>
-</form>
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/app_accounts.css' %}">
+{% endblock %}
+
+{% block extra_title %}
+     | Sign Up
+{% endblock %}
+
+{% block content %}
+
+<section class="accounts-section container">
+    <h1 class="section-heading">Sign Up</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}  <!-- Display the UserCreationForm fields -->
+        <button type="submit">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="{% url 'accounts:login' %}">Log in</a></p>
+{% endblock %}

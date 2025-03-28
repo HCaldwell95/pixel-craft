@@ -20,7 +20,7 @@ DESIGN_CATEGORIES = [
 
 # UserProfile model: Stores additional information about the user, such as their favorite design category
 class UserProfile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     favorite_category = models.CharField(max_length=50, choices=DESIGN_CATEGORIES, blank=True, null=True)
     phone = models.CharField(max_length=15, blank=True, null=True)  # If you want to store the user's phone
 
@@ -30,9 +30,10 @@ class UserProfile(models.Model):
 # CustomUser model: Extends the default User model by adding a 'phone' field
 class CustomUser(AbstractUser):
     
+    phone = models.CharField(max_length=15, blank=True, null=True)  # Add the 'phone' field
     groups = models.ManyToManyField(
         'auth.Group',
-        related_name='customuser_groups',  # Adding a related_name to resolve clash
+        related_name='customuser_groups',
         blank=True
     )
     

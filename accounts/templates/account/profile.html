@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/app_accounts.css' %}">
+{% endblock %}
+
+{% block extra_title %}
+     | My Profile
+{% endblock %}
+
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+<section class="accounts-section container">
+    <h1 class="section-heading">Your Profile</h1>
+    <p>See all of your account details here!</p>
+
+    <div class="accounts-row-spacer row">
+        <div class="col">
+            <img src="{{ user.profile.picture.url }}" alt="Profile Picture" class="img-fluid rounded-circle">
+        </div>
+    </div>
+
+    <!-- Profile Table -->
+    <div class="col">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td><strong>Username</strong></td>
+                    <td>{{ user.username }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Email</strong></td>
+                    <td>{{ user.email }}</td>
+                </tr>
+                <tr>
+                    <td><strong>First Name</strong></td>
+                    <td>{{ user.first_name }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Last Name</strong></td>
+                    <td>{{ user.last_name }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Joined</strong></td>
+                    <td>{{ user.date_joined|date:"F d, Y" }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="accounts-row-spacer row">
+        <a href="{% url 'edit_profile' %}" class="btn btn-primary">Edit Profile</a>
+    </div>
+</section>
+{% endblock %}

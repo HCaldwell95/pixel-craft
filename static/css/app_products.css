@@ -18,15 +18,19 @@ body {
 .transparent-container-fw  {
     background-color: rgba(0, 0, 0, 0.8);  /* Transparent grey background */
     width: 100%;
-    margin-bottom: -0.021px;
+    padding-top: 1.5em;
 }
 
-.section-diagonal-border {
-    background-image: url('your-background-image.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 50px 0;
-    position: relative;
+.products-hero {
+    background-color: rgba(0, 0, 0, 0.89);
+    padding: 0;
+    height: 40%;
+}
+
+.products-hero div {
+    padding-top: 4em;
+    padding-left: 3em;
+    width: 80%;
 }
 
 .section-diagonal-border::after {
@@ -42,7 +46,7 @@ body {
 }
 
 .products-container h2 {
-    margin-top: 0;
+    margin-top: 2rem;
     font-size: 64px;
     font-weight: bold;
     text-transform: uppercase;
@@ -67,4 +71,9 @@ body {
     padding: 100px;
     border-radius: 40px;
     border: 10px black double;
+}
+
+#productImage {
+    max-width: 100%;
+    height: auto;
 }

@@ -11,7 +11,7 @@ urlpatterns = [
     path('orders/', include('orders.urls')),
     path('accounts/', include('allauth.urls')),  # Include the accounts URLs
     path('profile/', views.profile, name='profile'),  # Profile view
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # Serve media files in development (use only in development)
 if settings.DEBUG:

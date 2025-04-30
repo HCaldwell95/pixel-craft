@@ -7,51 +7,46 @@
 
 {% block content %}
   <section class="transparent-container-fw">
+
+    <!-- Product Details -->
     <div class="container product-details">
       <div class="row product-description">
+
+        <!-- Product Image Display -->
         <div class="col-md-6">
-          <!-- Non-Automated Image Slideshow -->
-          <div id="productSlideshow" class="carousel slide" data-bs-ride="false">
-            <div class="carousel-inner" id="carouselImages">
-              {% for image in product.images.all %}
-                <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                  <img src="{{ image.image_url }}" class="d-block w-100" alt="{{ product.name }}">
-                </div>
-              {% endfor %}
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#productSlideshow" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#productSlideshow" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+          <div id="productImageContainer">
+            <img id="productImage" src="{{ product.options.first.image.url }}" alt="Product Image" class="d-block w-100">
           </div>
         </div>
-        
+
         <div class="col-md-6">
-          <!-- Product Details -->
           <h3>{{ product.name }}</h3>
           <p>{{ product.description }}</p>
-          <h4>${{ product.price }}</h4>
+          <h4>£{{ product.price }}</h4>
           
-          <!-- Customization Dropdowns -->
-          <form id="productForm">
+          <!-- Product Form -->
+          <form id="productForm" method="POST" action="{% url 'add_to_cart' %}">
+            {% csrf_token %}
+
+            <!-- Option Dropdown -->
             <div class="mb-3">
               <label for="optionSelect" class="form-label">Options</label>
               <select class="form-select" id="optionSelect" name="option" onchange="updatePrice()">
                 {% for option in product.options.all %}
-                  <option value="{{ option.price }}">{{ option.name }} - £{{ option.price }}</option>
+                  <option value="{{ option.price }}" data-option-name="{{ option.name }}" data-image-url="{{ option.image.url}}">
+                    {{ option.name }} - £{{ option.price }}
+                  </option>
                 {% endfor %}
               </select>
             </div>
           
+            <!-- Quantity Dropdown -->
             <div class="mb-3">
               <label for="quantity" class="form-label">Quantity</label>
               <input type="number" id="quantity" name="quantity" class="form-control" value="1" min="1" onchange="updatePrice()">
             </div>
           
+            <!-- Total Price Display -->
             <p>Total: £<span id="totalPrice">{{ product.get_minimum_price }}</span></p>
           
             <button type="submit" class="btn btn-primary">Add to Cart</button>
@@ -61,33 +56,6 @@
     </div>
   </section>
 
-  <script>
-    // JavaScript to update the slideshow based on dropdown selection
-    const sizeSelect = document.getElementById('sizeSelect');
-    const colorSelect = document.getElementById('colorSelect');
-    
-    sizeSelect.addEventListener('change', updateSlideshow);
-    colorSelect.addEventListener('change', updateSlideshow);
+  <script src="{% static 'js/product.js' %}"></script>
 
-    function updateSlideshow() {
-      const selectedSize = sizeSelect.value;
-      const selectedColor = colorSelect.value;
-      
-      // Logic to update the images based on size/color (you would need to map this logic with your backend)
-      // Example: if size 'large' is selected, show the corresponding images
-      
-      // For now, we can reload the carousel with the same images
-      const carouselImages = document.getElementById('carouselImages');
-      // Clear existing images
-      carouselImages.innerHTML = '';
-
-      // Insert images dynamically based on the selection
-      // Example (you can replace this with actual dynamic data):
-      const newImage = document.createElement('div');
-      newImage.classList.add('carousel-item', 'active');
-      newImage.innerHTML = `<img src="path_to_new_image_based_on_selection.jpg" class="d-block w-100" alt="Updated Image">`;
-
-      carouselImages.appendChild(newImage);
-    }
-  </script>
 {% endblock %}

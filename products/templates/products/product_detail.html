@@ -15,7 +15,11 @@
         <!-- Product Image Display -->
         <div class="col-md-6">
           <div id="productImageContainer">
-            <img id="productImage" src="{{ product.options.first.image.url }}" alt="Product Image" class="d-block w-100">
+            {% if product.options.first.image %}
+              <img id="productImage" src="{{ product.options.first.image }}" alt="Product Image" class="d-block w-100">
+            {% else %}
+              <img id="productImage" src="{{ product.image_url }}?q_auto,f_auto,c_fill,w_300,h_300" alt="No product image available" class="d-block w-100">
+            {% endif %}
           </div>
         </div>
 
@@ -29,17 +33,25 @@
             {% csrf_token %}
 
             <!-- Option Dropdown -->
-            <div class="mb-3">
-              <label for="optionSelect" class="form-label">Options</label>
-              <select class="form-select" id="optionSelect" name="option" onchange="updatePrice()">
-                {% for option in product.options.all %}
-                  <option value="{{ option.price }}" data-option-name="{{ option.name }}" data-image-url="{{ option.image.url}}">
-                    {{ option.name }} - £{{ option.price }}
-                  </option>
-                {% endfor %}
-              </select>
-            </div>
-          
+            {% if product.options.all %}
+              <div class="mb-3">
+                <label for="optionSelect" class="form-label">Options</label>
+                <select class="form-select" id="optionSelect" name="option" onchange="updateImage()">
+                  {% for option in product.options.all %}
+                    <option value="{{ option.price }}"
+                            data-option-name="{{ option.name }}"
+                            data-image-url="{{ option.image }}">
+                      {{ option.name }} - £{{ option.price }}
+                    </option>
+                  {% endfor %}
+                </select>
+              </div>
+
+            <!-- Hidden Option Dropdown -->
+            {% else %}
+              <p>No additional options available for this product.</p>
+            {% endif %}
+
             <!-- Quantity Dropdown -->
             <div class="mb-3">
               <label for="quantity" class="form-label">Quantity</label>

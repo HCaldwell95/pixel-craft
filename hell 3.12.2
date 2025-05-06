@@ -1,0 +1,300 @@
+[33mcommit d90fe2a1dd75537bddbb2ed7edd68adc7d56f09a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Wed Apr 30 15:33:22 2025 +0000
+
+    refactor(Product Details): Continued to implement product details and js functionality
+    
+    - Product images are not loading based on the option selected, further tweaks required.
+    
+    - updatePrice functionality remains incomplete.
+    
+    - General JavaScript issues require further attention.
+
+[33mcommit 499c0166ab06997bf2e5fc549f805d3e310e6add[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Wed Apr 30 11:27:34 2025 +0000
+
+    fix(database): reset database to resolve mitigation errors
+    
+    encountered issues with the database manipulation, removed existing database and installed new
+    
+    resolved mitigation fault, allowing project continuation
+
+[33mcommit b9c610f2add21f8372cf7a614aac855651d194df[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Fri Mar 28 12:30:30 2025 +0000
+
+    Fix profile page rendering and enhance user authentication URLs
+    - Fixed Profile Page Display:
+    - Updated the profile page template to display user details in a table format for better readability along with their profile image.
+    - Structured user profile attributes in a table with clear labelling for each attribute
+    - Implemented a button to navigate users to the 'Edit Profile' page, allowing easy access to edit their details.
+    - Updated URL Configuration:
+    - Ensured that the authView was correctly defined and rendered for user sign-up functionality.
+    - Implemented Profile Editing Functionality:
+
+[33mcommit 4fdf0a05adfdcca7dc3a81518a48f24ce2ddae77[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Wed Mar 26 12:43:34 2025 +0000
+
+    Implement custom user model and integrate django-allauth for user authentication
+    
+    - Created a custom user model (`CustomUser`) to extend the default Django User model with a phone number field.
+    - Implemented `UserProfile` model to store additional user information, such as favorite design categories.
+    - Configured `AUTH_USER_MODEL` to use `accounts.CustomUser` as the user model.
+    - Integrated `django-allauth` for authentication, account management, and email verification.
+    - Updated `MIDDLEWARE` settings to include `allauth.account.middleware.AccountMiddleware`.
+    - Set up `ACCOUNT_SIGNUP_FIELDS` and `ACCOUNT_LOGIN_METHODS` for customized user registration and login process.
+    - Ensured mandatory email verification with `ACCOUNT_EMAIL_VERIFICATION` set to 'mandatory'.
+
+[33mcommit 84890ee4b1f68a02ac43ea572d4e83017116fc0b[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Wed Mar 19 15:35:09 2025 +0000
+
+    Linked services to corresponding products and updated README
+    
+    - Added  links to services for better product mapping
+    - Updated service links in the services section
+    - Created and added info to README.md
+
+[33mcommit def129afc5379b33e4dfe291747e4a669162a413[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Wed Mar 19 11:50:32 2025 +0000
+
+    Add custom fonts to the project
+    
+    - Included 'Cormorant', 'Italiana', and 'Audiowide' fonts in the static/fonts directory.
+    - Applied the fonts across various elements in the CSS, including headers and special sections.
+    - Ensured proper use of @font-face to load and use the fonts.
+
+[33mcommit 04fc461db8fb03afa11ac261cf555c2c52fc9f44[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Wed Mar 19 09:33:19 2025 +0000
+
+    feat: Optimize product page performance & add missing images
+    
+    Added missing images to the product page to ensure all products display correctly. Optimised Cloudinary image URLs by adding c_fill,w_XXX,h_XXX to resize images dynamically and reduce bandwidth usage. Improved frontend efficiency by ensuring lazy loading is used for all images.
+
+[33mcommit 4ae9de0af3534cc3b777bd9909310785065248c6[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Tue Mar 18 09:27:42 2025 +0000
+
+    style(product_detail): add background cover and product description styles
+
+[33mcommit 3280635090be8876915e6c8ec67d2ca7ddfb4d8e[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Tue Mar 18 08:33:08 2025 +0000
+
+    style(footer): remove redundant CSS and center text on mobile
+
+[33mcommit a4690a95b9f8831f7b06613406a0c85f92dbae72[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Fri Jan 3 14:35:50 2025 +0000
+
+    Optimise product images and update products CSS
+    
+    - Added `q_auto` and `f_auto` parameters to Cloudinary image URLs for automatic quality and format optimisation.
+    - Updated CSS for product page to improve responsiveness and visual appeal.
+    - Minor layout adjustments for product listings and image sizes to ensure consistent styling across devices.
+
+[33mcommit 37c9a031d635996d470c57b765aec8d6f38684a3[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Fri Jan 3 11:22:30 2025 +0000
+
+    Add anchor links to portfolio sections
+    
+    - Updated portfolio image data to link to specific sections within the portfolio page.
+    - Adjusted URLs in portfolio_images to use /portfolio/#section-id format.
+    - Ensured anchor IDs in portfolio.html match the corresponding links for smooth scrolling navigation
+
+[33mcommit df720103cb6c43b0a2ecadaaef0f59709d97850f[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Fri Jan 3 10:50:44 2025 +0000
+
+    Added portfolio page with content and unique CSS styling
+
+[33mcommit 5805ec4f93dc2db51fc7d2e505e01f37d2dd48c1[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Fri Jan 3 10:14:56 2025 +0000
+
+    Added Blog page and content with unique CSS styling
+
+[33mcommit e617948989869378815b9f49791824008993865f[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Thu Jan 2 19:00:38 2025 +0000
+
+    Added Enquire page and content plus CSS styling
+
+[33mcommit e3b5e287f62e8f99fe140397bdce870a48cab578[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Thu Jan 2 18:22:25 2025 +0000
+
+    Added about page and content. Amended CSS styling
+
+[33mcommit 45a21bfa5478ea263eeef301e99a6e936eb2a8de[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Thu Jan 2 18:07:20 2025 +0000
+
+    Added FAQ page with content
+
+[33mcommit 4e7391e3b089f1e48d4dcbc41677fbeb36ede942[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Thu Jan 2 17:59:12 2025 +0000
+
+    Added experience page and content
+
+[33mcommit e9711357de8f5a272a83488303c0d3fb3848b3a3[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Thu Jan 2 17:46:46 2025 +0000
+
+    Added work-with-me page and content
+
+[33mcommit d086ba01f30eaf35cf693daeb6e645c7ef2c22a1[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Thu Jan 2 16:56:21 2025 +0000
+
+    Added diversity policy content and css stylings
+
+[33mcommit a65ac04cde51e35d309760306f17add1fe68a166[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Thu Jan 2 15:58:48 2025 +0000
+
+    Created 'core' app to store essential templates for core functionality - created diversity.html
+
+[33mcommit 1612bd34fd1e53836e77b9d43e30a4939c67bfd7[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Thu Jan 2 15:47:02 2025 +0000
+
+    Added categories.json for later use
+
+[33mcommit 97919f420d2027ba44fd89e09873b16b3b54a190[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Thu Jan 2 13:34:15 2025 +0000
+
+    Added product images and corrected CSS styling
+
+[33mcommit 4e6cb7a4e061aaf70cdf11d73fb5b134eca1d391[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Thu Jan 2 12:31:03 2025 +0000
+
+    Added links to navbar for existing pages
+
+[33mcommit a889215ee1bb3974b72b84ed23a60feadd40f4f9[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Sun Dec 15 21:02:57 2024 +0000
+
+    Reorganised css file structure
+
+[33mcommit fc525a14f2e93592b876a2b79eec1996e4ea0cb4[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Sun Dec 15 20:42:46 2024 +0000
+
+    Extended product model and JSON to allow for options and quantity to calculate dynamically - incomplete
+
+[33mcommit c08993cf9b1d1b3382b03f75028877e1d177ad11[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Sat Dec 14 16:24:19 2024 +0000
+
+    Added model to products to display product list using JSON fixture
+
+[33mcommit 160794b4b7f1ee0d0abb01e9f5001a61810c11b0[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Sat Dec 14 14:51:34 2024 +0000
+
+    Added template files and placeholder text ready to develop further
+
+[33mcommit fec7d299a620b79d7db103dfdcc666ddae63008e[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Sat Dec 14 13:26:34 2024 +0000
+
+    Add responsive CSS to portfolio and additional portfolio images
+
+[33mcommit 7b958696d0dca1711032d359cef79c742e86acc9[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Sat Dec 14 11:04:37 2024 +0000
+
+    Added responsiveness to portfolio cards
+
+[33mcommit 522dabea155b5db38f3b7f8a22211747e1ce8cdd[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Fri Dec 13 20:30:32 2024 +0000
+
+    Added portfolio section to home page and CSS
+
+[33mcommit 0a9ef3555c0459ab074e8d1eec0dc9ffc022c497[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Fri Dec 13 19:08:59 2024 +0000
+
+    Added About Us section to home page and CSS
+
+[33mcommit c51ae07c2490b9ffbf31397d749482c63243c4f6[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Fri Dec 13 18:32:12 2024 +0000
+
+    Added CSS to services section on home page
+
+[33mcommit 1f61ddbb67202e124330668f5cca5b2eef1eae50[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Fri Dec 13 17:09:53 2024 +0000
+
+    Added services and loop model to home page
+
+[33mcommit c3a488802c1cfd709ed7889906eb31994e07d34a[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Fri Dec 13 15:35:36 2024 +0000
+
+    Add new logo for navbar
+
+[33mcommit 8fbd5a19b23a9913ca9c110065b2365eca65b430[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Fri Dec 13 15:12:39 2024 +0000
+
+    Add media queries for navbar and footer for responsiveness
+
+[33mcommit 6a45e0eab365242ab9e2a275dcb0f49ee9dd1d1f[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Fri Dec 13 13:12:07 2024 +0000
+
+    Added footer and styles, added logo image and twaked navbar
+
+[33mcommit f4b5c6e18417eba8e2083d4b234193c1ab1d808d[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Fri Dec 13 12:02:26 2024 +0000
+
+    Added background image and tweaked navbar styles
+
+[33mcommit 8d568ed33b02ebf14b46374c26b302646da955de[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Fri Dec 13 11:09:52 2024 +0000
+
+    Altered Navbar for responsive design and improved responsiveness
+
+[33mcommit aceb50cd44aee85362810267e5e1b95c6e65df1d[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Mon Nov 25 15:04:23 2024 +0000
+
+    Set up basic templates for base.html, home and navbars
+
+[33mcommit 626ac577cd0d6f8ce7cf937dc2ca4852731f9381[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Mon Nov 25 13:56:18 2024 +0000
+
+    Set up project database
+
+[33mcommit 80cd6dc86c33a839ab9753cc6a92ea7f0c2f7eb0[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Mon Nov 25 12:49:13 2024 +0000
+
+    Project Setup
+
+[33mcommit a3c5d2f246e2cb254d539656683365103bc2e475[m
+Author: Hayden Caldwell <hade_caldwell@msn.com>
+Date:   Mon Nov 25 12:38:51 2024 +0000
+
+    Initial Commit
+
+[33mcommit 011879e23fea6e4d156b4797e67f19097851c516[m
+Author: HCaldwell95 <148483418+HCaldwell95@users.noreply.github.com>
+Date:   Mon Nov 25 12:24:57 2024 +0000
+
+    Initial commit

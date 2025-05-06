@@ -18,7 +18,8 @@
           "product": 1,
           "name": "Colour & Imagery",
           "price": 35.00,
-          "description": "Vibrant and eye-catching poster prints that combine stunning colours with creative imagery. Perfect for adding a bold statement to your space, whether it’s for home décor, modern offices, or branding campaigns that demand attention."
+          "description": "Vibrant and eye-catching poster prints that combine stunning colours with creative imagery. Perfect for adding a bold statement to your space, whether it’s for home décor, modern offices, or branding campaigns that demand attention.",
+          "image": "https://res.cloudinary.com/ddj2rpxcb/image/upload/v1746572835/po-colour-and-imagery_upoh2h.jpg"
         }
       },
       {
@@ -27,7 +28,8 @@
           "product": 1,
           "name": "Greyscale  & Imagery",
           "price": 20.00,
-          "description": "Sleek and sophisticated poster prints in greyscale, blending sharp imagery with timeless monochrome tones. Ideal for creating a minimalist aesthetic or enhancing professional environments with understated elegance."
+          "description": "Sleek and sophisticated poster prints in greyscale, blending sharp imagery with timeless monochrome tones. Ideal for creating a minimalist aesthetic or enhancing professional environments with understated elegance.",
+          "image": "https://res.cloudinary.com/ddj2rpxcb/image/upload/v1746573354/po-greyscale-and-imagery_kup0qt.jpg"
         }
       },
     {
@@ -62,7 +64,9 @@
           "product": 3,
           "name": "Paper Bags",
           "price": 20.00,
-          "description": "40no Eco-friendly paper bags for packaging."
+          "description": "40no Eco-friendly paper bags for packaging.",
+          "image": "https://res.cloudinary.com/ddj2rpxcb/image/upload/v1746572837/po-paper-bags_hhjkvf.jpg"
+
         }
       },
       {
@@ -71,7 +75,8 @@
           "product": 3,
           "name": "Cardboard Boxes",
           "price": 50.00,
-          "description": "100no Durable cardboard boxes for shipping."
+          "description": "100no Durable cardboard boxes for shipping.",
+          "image": "https://res.cloudinary.com/ddj2rpxcb/image/upload/v1746572843/po-cardboard-boxes_fs9ibj.jpg"
         }
       },
       {
@@ -80,7 +85,8 @@
           "product": 3,
           "name": "Labels",
           "price": 15.00,
-          "description": "50no Customised labels for branding."
+          "description": "50no Customised labels for branding.",
+          "image": "https://res.cloudinary.com/ddj2rpxcb/image/upload/v1746572835/po-labels_wl7edg.jpg"
         }
       },      
     {

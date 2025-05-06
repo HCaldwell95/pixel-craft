@@ -29,7 +29,7 @@ function updateImage() {
 
 // JavaScript for price update
 function updatePrice() {
-  // Get the base price from Django context (ensure it's properly rendered as a number)
+  // Get the base price from Django context
   const basePrice = parseFloat("{{ product.price }}");  // Parse to float for arithmetic
   
   // Get the selected option and its price
@@ -38,7 +38,7 @@ function updatePrice() {
   const selectedOptionPrice = parseFloat(selectedOption.value);  // Price of selected option
   
   // Get the selected quantity
-  const quantity = parseInt(document.getElementById('quantity').value); // Ensure it's an integer
+  const quantity = parseInt(document.getElementById('quantity').value);
   
   // Calculate final price (base price + selected option price)
   const finalPrice = basePrice + selectedOptionPrice;

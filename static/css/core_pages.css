@@ -66,7 +66,7 @@ hr {
     margin: 0 auto;
 }
 
-/* Portfolio-specific styles */
+/* --------------------------- Portfolio-specific styles */
 .portfolio-details {
     margin-top: 30px;
     display: flex;
@@ -108,8 +108,7 @@ hr {
 }
 
 
-
-/* Enquire-specific styles */
+/* --------------------------------Enquire-specific styles */
 
 label {
     display: block; /* Makes label take up the full width */
@@ -120,7 +119,6 @@ label {
 button {
     margin-top: 20px;
 }
-
 
 
 /* Blog-specific styles */
@@ -157,4 +155,11 @@ button {
 
 .blog-post a:hover {
     text-decoration: underline;
+}
+
+
+/* ------------------------------- Basket-specific styles */
+
+.basket-container {
+    padding: 130px 0px;
 }

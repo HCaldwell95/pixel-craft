@@ -1,51 +1,74 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/core_pages.css' %}">
+{% endblock %}
+
+{% block extra_title %}
+    | Basket
+{% endblock %}
+
+{% block page_header %}
+{% endblock %}
 
 {% block content %}
-  <div class="container">
-    <h2>Your Basket</h2>
+  <section class="core-page-section container">
+    <h1 class="section-heading">Your Basket</h1>
+    <div class="row">
+      <h2>Digital Purchases</h2>
+      <p>
+        All digital purchases will be sent via email within 10 minutes. Should you have any issues please contact our Customer Support Team @: <a href="">pixelcraftsupport@pixelcraft.net</a>.
+      </p>
+    </div>
+    <div class="row">
+      <div class="basket-container">
+        <h2>Summary</h2>
 
-    {% if cart_items %}
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Product</th>
-            <th>Option</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Total</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for item in cart_items %}
-            <tr>
-              <td>{{ item.product.name }}</td>
-              <td>
-                {% if item.option %}
-                  {{ item.option.name }}
-                {% else %}
-                  No options
-                {% endif %}
-              </td>
-              <td>{{ item.quantity }}</td>
-              <td>£{{ item.item_price|floatformat:2 }}</td>
-              <td>£{{ item.item_price|floatformat:2 }}</td>
-              <td>
-                <form action="{% url 'remove_from_cart' item.product.id %}" method="POST">
-                  {% csrf_token %}
-                  <button type="submit" class="btn btn-danger">Remove</button>
-                </form>
-              </td>
-            </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+        {% if cart_items %}
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Option</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for item in cart_items %}
+                <tr>
+                  <td>{{ item.product.name }}</td>
+                  <td>
+                    {% if item.option %}
+                      {{ item.option.name }}
+                    {% else %}
+                      No options
+                    {% endif %}
+                  </td>
+                  <td>{{ item.quantity }}</td>
+                  <td>£{{ item.item_price|floatformat:2 }}</td>
+                  <td>£{{ item.item_price|floatformat:2 }}</td>
+                  <td>
+                    <form action="{% url 'remove_from_cart' item.product.id %}" method="POST">
+                      {% csrf_token %}
+                      <button type="submit" class="btn btn-danger">Remove</button>
+                    </form>
+                  </td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
 
-      <h3>Total: £{{ total_price|floatformat:2 }}</h3>
+          <h3>Total: £{{ total_price|floatformat:2 }}</h3>
 
-      <a href="{% url 'checkout' %}" class="btn btn-primary">Proceed to Checkout</a>
-    {% else %}
-      <p>Your basket is empty.</p>
-    {% endif %}
-  </div>
+          <a href="{% url 'checkout' %}" class="btn btn-primary">Proceed to Checkout</a>
+        {% else %}
+          <p>Your basket is empty.</p>
+        {% endif %}
+      </div>
+    </div>
+  </section>
 {% endblock %}

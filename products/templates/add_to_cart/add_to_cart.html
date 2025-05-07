@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container">
+    <h2>Your Basket</h2>
+
+    {% if cart_items %}
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Option</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in cart_items %}
+            <tr>
+              <td>{{ item.product.name }}</td>
+              <td>
+                {% if item.option %}
+                  {{ item.option.name }}
+                {% else %}
+                  No options
+                {% endif %}
+              </td>
+              <td>{{ item.quantity }}</td>
+              <td>£{{ item.item_price|floatformat:2 }}</td>
+              <td>£{{ item.item_price|floatformat:2 }}</td>
+              <td>
+                <form action="{% url 'remove_from_cart' item.product.id %}" method="POST">
+                  {% csrf_token %}
+                  <button type="submit" class="btn btn-danger">Remove</button>
+                </form>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <h3>Total: £{{ total_price|floatformat:2 }}</h3>
+
+      <a href="{% url 'checkout' %}" class="btn btn-primary">Proceed to Checkout</a>
+    {% else %}
+      <p>Your basket is empty.</p>
+    {% endif %}
+  </div>
+{% endblock %}

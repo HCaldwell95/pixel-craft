@@ -41,7 +41,7 @@
                 <label for="optionSelect" class="form-label">Options</label>
                 <select class="form-select" id="optionSelect" name="option" onchange="updateImage()" aria-describedby="optionSelectDescription">
                   {% for option in product.options.all %}
-                    <option value="{{ option.price }}"
+                    <option value="{{ option.id }}"
                             data-option-price="{{ option.price }}"
                             data-option-name="{{ option.name }}"
                             data-image-url="{{ option.image }}">

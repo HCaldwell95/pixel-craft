@@ -66,8 +66,9 @@ function updatePrice() {
 
   // Check if options exist, and use the selected option's price
   if (optionSelect) {
-      const selectedOption = optionSelect.options[optionSelect.selectedIndex];
-      price = parseFloat(selectedOption.value);
+    const selectedOption = optionSelect.options[optionSelect.selectedIndex];
+    // Parse the price from the data attribute instead of the value
+    price = parseFloat(selectedOption.getAttribute('data-option-price')) || 0;
   } else {
       // If no options exist, use the base product price
       price = parseFloat(document.getElementById('productForm').dataset.basePrice);

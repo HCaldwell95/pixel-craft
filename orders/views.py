@@ -1,8 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView
 
-class OrderListView(ListView):
-    template_name = 'orders/order_list.html'
-
-    def get_queryset(self):
-        return []
+def checkout(request):
+    # Your checkout logic here
+    return render(request, 'orders/checkout.html')  # Assuming you want to render a template

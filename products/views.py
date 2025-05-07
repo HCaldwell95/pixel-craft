@@ -44,3 +44,46 @@ def add_to_cart(request):
         request.session['cart'] = cart
 
         return redirect('cart')  # Redirect to the cart view
+
+from django.shortcuts import render, redirect, get_object_or_404
+from .models import Product, ProductOption
+
+
+
+# View cart page
+def cart(request):
+    cart_items = []
+    total_price = 0
+
+    # Get the cart from session
+    cart = request.session.get('cart', [])
+
+    # Get product and option details for each item in the cart
+    for item in cart:
+        product = get_object_or_404(Product, id=item['product_id'])
+        option = get_object_or_404(ProductOption, id=item['option_id']) if item['option_id'] else None
+
+        # Calculate total price for this item
+        item_price = float(item['price']) * item['quantity']
+        total_price += item_price
+
+        cart_items.append({
+            'product': product,
+            'option': option,
+            'quantity': item['quantity'],
+            'item_price': item_price,
+        })
+
+    return render(request, 'products/cart.html', {'cart_items': cart_items, 'total_price': total_price})
+
+# Remove item from cart
+def remove_from_cart(request, product_id):
+    cart = request.session.get('cart', [])
+
+    # Filter out the item with the given product_id
+    cart = [item for item in cart if item['product_id'] != product_id]
+
+    # Save the updated cart back to the session
+    request.session['cart'] = cart
+
+    return redirect('cart')  # Redirect to cart page

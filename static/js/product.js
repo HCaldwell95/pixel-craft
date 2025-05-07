@@ -1,57 +1,96 @@
+// Wait for the DOM to be fully loaded before executing the script
 document.addEventListener('DOMContentLoaded', function () {
-  // Set the default image to the first available option
-  const firstOption = document.querySelector('#optionSelect option:first-child');
-  const defaultImageUrl = firstOption.getAttribute('data-image-url');
+
+  // Get the elements for options, product image, and quantity input
+  const optionSelect = document.getElementById('optionSelect');
   const productImage = document.getElementById('productImage');
-  
-  if (productImage) {
-    productImage.src = defaultImageUrl;
+
+  // If options and product image elements exist, set the default image from the first option (if available)
+  if (optionSelect && productImage) {
+    const firstOption = optionSelect.querySelector('option:first-child');
+
+    // If the first option has a valid image URL, update the product image
+    if (firstOption && firstOption.getAttribute('data-image-url')) {
+      productImage.src = firstOption.getAttribute('data-image-url');
+    }
+
+    // Add event listeners to update both the image and the price whenever the selected option changes
+    optionSelect.addEventListener('change', updateImage);
+    optionSelect.addEventListener('change', updatePrice);
   }
 
-  // Add event listener to the option select dropdown
-  const optionSelect = document.getElementById('optionSelect');
-  optionSelect.addEventListener('change', updateImage);
+  // Add an event listener to update the price whenever the quantity is changed
+  const quantityInput = document.getElementById('quantity');
+  if (quantityInput) {
+    quantityInput.addEventListener('input', updatePrice);
+  }
+
+  // Initial price and image update on page load
+  updatePrice();
+  updateImage();
 });
 
+
+// Function to update the displayed product image based on the selected option
 function updateImage() {
-  // Get the selected option's image URL
+  // Get the selected option and its associated image URL
   const optionSelect = document.getElementById('optionSelect');
   const selectedOption = optionSelect.options[optionSelect.selectedIndex];
   const imageUrl = selectedOption.getAttribute('data-image-url');
-  
-  // Update the product image src
   const productImage = document.getElementById('productImage');
-  if (productImage) {
+  
+  // If product image and image URL exist, update the product image source
+  if (productImage && imageUrl) {
     productImage.src = imageUrl;
   }
 }
 
 
-// JavaScript for price update
-function updatePrice() {
-  // Get the base price from Django context
-  const basePrice = parseFloat("{{ product.price }}");  // Parse to float for arithmetic
-  
-  // Get the selected option and its price
-  const optionSelect = document.getElementById('optionSelect');
-  const selectedOption = optionSelect.options[optionSelect.selectedIndex];
-  const selectedOptionPrice = parseFloat(selectedOption.value);  // Price of selected option
-  
-  // Get the selected quantity
-  const quantity = parseInt(document.getElementById('quantity').value);
-  
-  // Calculate final price (base price + selected option price)
-  const finalPrice = basePrice + selectedOptionPrice;
-  
-  // Update the price display (multiply final price by quantity)
-  const totalPriceElement = document.getElementById('totalPrice');
-  totalPriceElement.textContent = `£${(finalPrice * quantity).toFixed(2)}`;  // Format as currency
+// This function calculates and updates the total price
+// on the product page based on the selected options and quantity.
+// It supports both products with options and products without options.
+//
+// Assumptions:
+// - Option prices are valid floats.
+// - The product form has a `data-base-price` attribute for base pricing.
 
-// Call updatePrice when the page loads to show the correct price
-window.onload = function() {
-  updatePrice();  // Update price on page load
-};
+function updatePrice() {
+  // Get the selected quantity, defaulting to 1 if invalid
+  const quantity = parseInt(document.getElementById('quantity').value) || 1;
+
+  // Get the option select element and total price element
+  const optionSelect = document.getElementById('optionSelect');
+  const totalPriceEl = document.getElementById('totalPrice');
+
+  let price = 0;
+
+  // Check if options exist, and use the selected option's price
+  if (optionSelect) {
+      const selectedOption = optionSelect.options[optionSelect.selectedIndex];
+      price = parseFloat(selectedOption.value);
+  } else {
+      // If no options exist, use the base product price
+      price = parseFloat(document.getElementById('productForm').dataset.basePrice);
+  }
+
+  // Calculate the total price based on selected quantity
+  const total = price * quantity;
+
+  // Update the displayed total price
+  totalPriceEl.textContent = total.toFixed(2);
 }
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+  

@@ -7,20 +7,13 @@ def product_list(request):
 
 
 def product_detail(request, product_id):
-    # Fetch the product or return a 404 error if it doesn't exist
-    product = get_object_or_404(Product, pk=product_id)
-    
-    # Fetch the product options related to the product
-    options = ProductOption.objects.filter(product=product)
-    
-    # Pass the product and options to the template context
+    product = get_object_or_404(Product.objects.prefetch_related('options'), pk=product_id)
+
     context = {
-        'product': product,
-        'options': options
+        'product': product
     }
-    
-    # Render the template with the context data
     return render(request, 'products/product_detail.html', context)
+
 
 
 def add_to_cart(request):

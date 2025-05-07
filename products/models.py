@@ -33,3 +33,6 @@ class ProductOption(models.Model):
 
     def __str__(self):
         return self.name
+
+    def has_options(self):
+        return self.options.exists()

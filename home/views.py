@@ -150,6 +150,5 @@ def submit_enquiry(request):
 def blog(request):
     return render(request, 'home/blog.html')
 
-
 def profile(request):
     return render(request, 'account/profile.html')

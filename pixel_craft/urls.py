@@ -10,6 +10,7 @@ urlpatterns = [
     path('products/', include('products.urls')),
     path('orders/', include('orders.urls')),
     path('accounts/', include('allauth.urls')),  # Include the accounts URLs
+    path('accounts/', include('accounts.urls', namespace='accounts')),
     path('profile/', views.profile, name='profile'),  # Profile view
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

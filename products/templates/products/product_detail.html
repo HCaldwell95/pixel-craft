@@ -10,7 +10,8 @@
 
     <!-- Product Details -->
     <div class="container product-details">
-      <div class="row product-description" data-has-options="{% if product.options.all %}true{% else %}false{% endif %}">
+      <div class="row product-description" data-has-options="{% if product.options.exists %}true{% else %}false{% endif %}">
+
 
         <!-- Product Image Display -->
         <div class="col-md-6">
@@ -36,7 +37,7 @@
             <input type="hidden" name="product_id" value="{{ product.id }}">
 
             <!-- Option Dropdown (if exists) -->
-            {% if product.options.all %}
+            {% if product.options.exists %}
               <div class="mb-3">
                 <label for="optionSelect" class="form-label">Options</label>
                 <select class="form-select" id="optionSelect" name="option" onchange="updateImage()" aria-describedby="optionSelectDescription">

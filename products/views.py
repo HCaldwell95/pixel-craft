@@ -17,9 +17,18 @@ def add_to_cart(request):
         option_id = request.POST.get('option')
         quantity = int(request.POST.get('quantity', 1))
 
-        option = get_object_or_404(ProductOption, id=option_id)
-        product = option.product  # Get associated product
-        price = option.price      # Or use another price field if applicable
+        if not option_id:
+            # Option wasn't selected — redirect back or show error
+            return redirect('product_list')  # Or show message to select an option
+
+        try:
+            option = ProductOption.objects.get(id=option_id)
+        except ProductOption.DoesNotExist:
+            # Invalid option ID submitted
+            return redirect('product_list')  # Or render an error
+
+        product = option.product
+        price = option.price
 
         cart = request.session.get('cart', [])
         item_exists = False
@@ -35,11 +44,12 @@ def add_to_cart(request):
                 'product_id': product.id,
                 'option_id': option.id,
                 'quantity': quantity,
-                'price': float(price),  # Ensure it's serializable
+                'price': float(price),
             })
 
         request.session['cart'] = cart
         return redirect('cart')
+
 
 # View cart contents
 def cart(request):

@@ -20,9 +20,18 @@
 
     <div class="accounts-row-spacer row">
         <div class="col">
-            <img src="{{ user.profile.picture.url }}" alt="Profile Picture" class="img-fluid rounded-circle">
+            <img src="{% if user.userprofile.picture %}{{ user.userprofile.picture.url }}?{{ user.userprofile.updated_at.timestamp }}{% else %}https://res.cloudinary.com/ddj2rpxcb/image/upload/v1746752329/user-default_ruxmux.png{% endif %}" 
+                 alt="Profile Picture" class="img-fluid profile-portrait">
         </div>
+        <form method="post" enctype="multipart/form-data" action="{% url 'accounts:upload_profile_picture' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="profile_picture" class="btn btn-outline-secondary btn-sm">Upload New Picture</label>
+                <input type="file" id="profile_picture" name="profile_picture" class="d-none" onchange="this.form.submit()">
+            </div>
+        </form>        
     </div>
+    
 
     <!-- Profile Table -->
     <div class="col">

@@ -13,3 +13,4 @@ class ProductOptionInline(admin.TabularInline):
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     inlines = [ProductOptionInline]
+

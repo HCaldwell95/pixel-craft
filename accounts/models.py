@@ -18,33 +18,33 @@ DESIGN_CATEGORIES = [
     ('custom_prints', 'Custom Prints'),
 ]
 
-# UserProfile model: Stores additional information about the user, such as their favorite design category
+# UserProfile model
 class UserProfile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     favorite_category = models.CharField(max_length=50, choices=DESIGN_CATEGORIES, blank=True, null=True)
-    phone = models.CharField(max_length=15, blank=True, null=True)  # If you want to store the user's phone
+    phone = models.CharField(max_length=15, blank=True, null=True)
+    picture = models.ImageField(upload_to='profile_pics/', blank=True, null=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.user.username
 
-# CustomUser model: Extends the default User model by adding a 'phone' field
+# CustomUser model, extending the default User model
 class CustomUser(AbstractUser):
-    
     groups = models.ManyToManyField(
         'auth.Group',
-        related_name='customuser_groups',  # Adding a related_name to resolve clash
+        related_name='customuser_groups',  # Adding related_name to avoid clashes
         blank=True
     )
     
     user_permissions = models.ManyToManyField(
         'auth.Permission',
-        related_name='customuser_user_permissions',  # Adding a related_name to resolve clash
+        related_name='customuser_user_permissions',  # Adding related_name to avoid clashes
         blank=True
     )
 
-
-# Signal handler function: Automatically creates or updates a UserProfile when a User is saved
-@receiver(post_save, sender=User)
+# Signal to automatically create/update the UserProfile whenever a User is saved
+@receiver(post_save, sender=settings.AUTH_USER_MODEL)
 def create_or_update_user_profile(sender, instance, created, **kwargs):
     if created:
         UserProfile.objects.create(user=instance)
@@ -63,5 +63,3 @@ def home_details(request):
     """
     return render(request, 'home.html')
 
-# Set the custom user model to be used for authentication (instead of the default Django User model)
-AUTH_USER_MODEL = 'accounts.CustomUser'

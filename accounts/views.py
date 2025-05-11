@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm, AuthenticationForm
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.urls import reverse
@@ -57,3 +58,25 @@ def edit_profile(request):
 def authView(request):
     # Your authentication logic here
     return render(request, 'accounts/register.html')
+
+def login_view(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(request, data=request.POST)
+        if form.is_valid():
+            # Authenticate the user with the form's cleaned data
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user = authenticate(request, username=username, password=password)
+
+            if user is not None:
+                # Log the user in if authentication is successful
+                login(request, user)
+                return redirect('home')  # Redirect to the desired page after login
+            else:
+                # Add an error if authentication failed
+                form.add_error(None, "Invalid username or password.")
+
+    else:
+        form = AuthenticationForm()  # Initialize form for GET request
+
+    return render(request, 'account/login.html', {'form': form})

@@ -33,7 +33,7 @@
                     </li>
                 {% else %}
                     <li class="nav-item {% if url_name == 'account_login' %}active{% endif %}">
-                        <a class="nav-link" href="{% url 'account_login' %}" aria-label="Sign In">Sign In</a>
+                        <a class="nav-link" href="{% url 'accounts:login' %}" aria-label="Sign In">Sign In</a>
                     </li>
                 {% endif %}
                 {% endwith %}

@@ -47,7 +47,160 @@ hr {
 /* ---------------------------------------------------- Profile Page */
 
 .profile-portrait {
-    padding: 100px 20px;
     height: auto;
-    width: auto;
+    max-width: 100px;
+}
+
+/* ----------------------------------------------------- Login Page */
+
+/* General form styling */
+.login-container {
+    background: #343a40b0; /* Sets a white background */
+    padding-top: 5rem; /* Adjust content below fixed navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full screen height */
+}
+
+.login-box {
+    padding: 2.5rem;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    margin: 1rem;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+input[type="text"], input[type="password"], input[type="checkbox"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Adjust the checkbox styling */
+.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox label {
+    margin-left: 8px;
+    font-size: 14px;
+}
+
+/* Button styling */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Error Message */
+.error-message p {
+    color: red;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Links */
+.additional-links {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.additional-links a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.additional-links a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 480px) {
+    .login-box {
+        padding: 20px;
+        width: 90%;
+        font-size: 0.9rem; /* Smaller font for small screens */
+    }
+
+    .login-box h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Medium screens (tablets) */
+@media screen and (min-width: 768px) {
+    .login-box {
+        max-width: 650px;
+        font-size: 1rem; /* Standard base size */
+    }
+
+    .login-box h2 {
+        font-size: 1.75rem;
+    }
+
+    .profile-portrait {
+        max-width: 200px;
+    }
+}
+
+/* Large screens (small laptops) */
+@media screen and (min-width: 1024px) {
+    .login-box {
+        max-width: 800px;
+        font-size: 1.3rem;
+    }
+
+    .login-box h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Extra large screens (desktops) */
+@media screen and (min-width: 1280px) {
+    .login-box {
+        max-width: 1100px;
+    }
+
+    .login-box h2 {
+        font-size: 2.5rem;
+    }
+
+    .profile-portrait {
+        max-width: 400px;
+    }
 }

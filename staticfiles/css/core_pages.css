@@ -1,0 +1,165 @@
+body {
+    background: #fff; /* Sets a white background */
+    background-image: none; /* Ensures no background image is displayed */
+    color: #555;
+    font-family: 'Lato';
+    font-size: 18px;
+}
+
+#delivery-banner {
+    margin-top: 0.4em;
+}
+
+.core-page-section {
+    padding-top: 130px;
+    font-size: 22px;
+}
+
+.core-page-section > h1 {
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 2mm;
+    color: #4f696d;
+    text-shadow: 1px 1px 4px rgba(70, 128, 82, 0.3);
+}
+
+section > h2 {
+    font-size: 36px;
+    letter-spacing: 1mm;
+    padding: 1em;
+    background: linear-gradient(to right, #4f696d, #85b2b8);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Center all text within the containers */
+.container {
+    text-align: center;
+}
+
+/* Ensure headers and paragraphs are also centered */
+h1, h2, p {
+    text-align: center;
+    padding-bottom: 0.5em;
+}
+
+.core-page-ul {
+    list-style-position: inside; /* Keeps list markers aligned with text */
+    list-style-type:upper-roman;
+    text-align: left;
+}
+
+.core-page-ul-type-none {
+    list-style-type:none;
+    text-align: left;
+}
+
+.core-page-sub-ul {
+    list-style-type: none;
+    padding-top: 20px;
+}
+
+hr {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* --------------------------- Portfolio-specific styles */
+.portfolio-details {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.portfolio {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.portfolio, .blog-post h2 {
+    margin-top: 0;
+    font-size: 24px;
+    background: linear-gradient(to right, #4f696d, #85b2b8);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.portfolio p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.portfolio-image {
+    max-width: 100%;
+    max-height: 600px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    object-fit: fill;
+}
+
+
+/* --------------------------------Enquire-specific styles */
+
+label {
+    display: block; /* Makes label take up the full width */
+    text-align: left; /* Aligns the text to the left */
+    margin: 30px 5px; 
+}
+
+button {
+    margin-top: 20px;
+}
+
+
+/* Blog-specific styles */
+
+.blog-post {
+    background: #f9f9f9;
+    margin-bottom: 20px;
+    padding: 28px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h2 {
+    margin-top: 0;
+    font-size: 24px;
+    background: linear-gradient(to right, #4f696d, #85b2b8);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.blog-post p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.blog-post a {
+    color: #8443aa;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1mm;
+}
+
+.blog-post a:hover {
+    text-decoration: underline;
+}
+
+
+/* ------------------------------- Basket-specific styles */
+
+.basket-container {
+    padding: 130px 0px;
+}

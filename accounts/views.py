@@ -1,12 +1,13 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm, AuthenticationForm
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-from django.contrib.auth.models import User
 from .forms import RegisterForm
 from .models import UserProfile
 
@@ -69,9 +70,11 @@ def login_view(request):
             user = authenticate(request, username=username, password=password)
 
             if user is not None:
-                # Log the user in if authentication is successful
                 login(request, user)
-                return redirect('home')  # Redirect to the desired page after login
+                messages.success(request, "You have been logged in successfully.")  # Ensure this message triggers
+                # Add a dummy message to check if message system is working
+                messages.info(request, "This is a test message.")
+                return redirect('home')
             else:
                 # Add an error if authentication failed
                 form.add_error(None, "Invalid username or password.")

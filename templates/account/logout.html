@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/app_accounts.css' %}">
+{% endblock %}
+
+{% block extra_title %}
+    | Logged Out
+{% endblock %}
+
+{% block content %}
+<div class="login-container">
+    <div class="login-box">
+        <h2>You’ve been logged out</h2>
+
+        <p style="text-align: center; margin: 20px 0;">
+            Thanks for visiting. You have successfully signed out.
+        </p>
+
+        <div class="form-group">
+            <a href="{% url 'account_login' %}" class="btn btn-primary" style="display: block; text-align: center; text-decoration: none;">
+                Sign In Again
+            </a>
+        </div>
+
+        <div class="additional-links">
+            <p><a href="{% url 'home' %}">Return to Home</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}

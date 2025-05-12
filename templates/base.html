@@ -24,6 +24,21 @@
     {% endblock %}
 
     {% block extra_css %}
+        <style>
+            .popup-message {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            background-color: #28a745;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 6px;
+            z-index: 9999;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            display: none;
+            }
+        </style>
     {% endblock %}
 
     {% block corejs %}
@@ -76,7 +91,11 @@
     </header>
 
     {% if messages %}
-        <div class="message-container"></div>
+        <div id="popup-message" class="popup-message">
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        </div>
     {% endif %}
 
     {% block page_header %}
@@ -86,6 +105,17 @@
     {% endblock %}
 
     {% block postloadjs %}
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const messageContainer = document.querySelector('.message-container');
+                if (messageContainer) {
+                messageContainer.style.display = "block";
+                setTimeout(() => {
+                    messageContainer.style.display = "none";
+                }, 3000); // Hide after 3 seconds
+                }
+            });
+        </script>
     {% endblock %}
 
     
@@ -141,7 +171,4 @@
         </div>
     </div>
     </footer>
-
-
-
 </html>

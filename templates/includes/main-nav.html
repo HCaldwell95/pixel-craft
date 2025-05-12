@@ -24,11 +24,16 @@
                         <a class="nav-link" href="{% url 'profile' %}" aria-label="My Profile">My Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_logout' %}" aria-label="Logout">Logout</a>
+                        <form method="post" action="{% url 'accounts:account_logout' %}" id="nav-logout">
+                            {% csrf_token %}
+                            <button type="submit" class="nav-link btn btn-link" style="padding: 0; border: none; background: none;" aria-label="Logout">
+                                Logout
+                            </button>
+                        </form>
                     </li>
                 {% else %}
                     <li class="nav-item {% if url_name == 'account_login' %}active{% endif %}">
-                        <a class="nav-link" href="{% url 'account_login' %}" aria-label="Sign In">Sign In</a>
+                        <a class="nav-link" href="{% url 'accounts:account_login' %}" aria-label="Sign In">Sign In</a>
                     </li>
                 {% endif %}
                 {% endwith %}

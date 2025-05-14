@@ -11,41 +11,55 @@ from django.dispatch import receiver
 from .forms import RegisterForm
 from .models import UserProfile
 
-def register(request):
+def authView(request):
     if request.method == 'POST':
         form = RegisterForm(request.POST)
         if form.is_valid():
             user = form.save()
-            # Create UserProfile after user creation
+            # Optionally create a UserProfile
             UserProfile.objects.create(user=user)
-            return redirect('login')
+            messages.success(request, 'Your account has been created successfully!')
+            return redirect('accounts:login')  # Redirect to login after successful sign-up
+        else:
+            messages.error(request, 'There was an error with your form submission. Please check the details.')
     else:
         form = RegisterForm()
-    return render(request, 'accounts/register.html', {'form': form})
+
+    return render(request, 'accounts/signup.html', {'form': form})
 
 
 # Profile view to display user details along with UserProfile
 @login_required
 def profile_view(request):
+    """
+    Displays the user's profile along with the user profile data.
+    """
     profile = UserProfile.objects.get(user=request.user)
     return render(request, 'accounts/profile.html', {
-        'user': request.user,
-        'profile': profile
-    })
+        'user': request.user, 
+        'profile': profile})
+
 
 # Upload Profile Picture
 @login_required
 def upload_profile_picture(request):
+    """
+    Allows users to upload and update their profile picture.
+    """
     if request.method == 'POST' and request.FILES.get('profile_picture'):
         profile, created = UserProfile.objects.get_or_create(user=request.user)  # Ensures profile exists
         profile.picture = request.FILES['profile_picture']
         profile.save()
+        messages.success(request, 'Your profile picture has been updated.')
     return redirect('profile')
 
 
 # View for editing the user profile
 @login_required
 def edit_profile(request):
+    """
+    Allows users to edit their account details like username, email, etc.
+    """
     if request.method == 'POST':
         form = UserChangeForm(request.POST, instance=request.user)
         if form.is_valid():
@@ -54,13 +68,13 @@ def edit_profile(request):
     else:
         form = UserChangeForm(instance=request.user)
 
-    return render(request, 'account/edit_profile.html', {'form': form})
+    return render(request, 'accounts/edit_profile.html', {'form': form})
 
-def authView(request):
-    # Your authentication logic here
-    return render(request, 'accounts/register.html')
 
 def login_view(request):
+    """
+    Handles user login and redirects to the homepage if successful.
+    """
     if request.method == 'POST':
         form = AuthenticationForm(request, data=request.POST)
         if form.is_valid():

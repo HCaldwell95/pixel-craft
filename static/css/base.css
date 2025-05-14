@@ -132,7 +132,11 @@ a.category-badge > span.badge:hover {
 
 #nav-logout {
     padding-top: 8px;
-    padding-right: 8px;
+    padding-right: 10px;
+}
+
+button[type="submit"] {
+    font-size: var(--bs-nav-link-font-size)!important;
 }
 
 

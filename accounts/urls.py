@@ -8,15 +8,15 @@ from . import views
 app_name='accounts'
 
 urlpatterns = [
-    path('profile/', views.profile_view, name='profile'),
     path('profile/upload-picture/', views.upload_profile_picture, name='upload_profile_picture'),
     path('profile/edit/', views.edit_profile, name='edit_profile'),
     
     path('accounts/', include('allauth.urls')),
-    path('register/', views.authView, name='register'),
+    path('signup/', views.authView, name='signup'),
 
     path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
 
+    path('accounts/profile/', views.profile_view, name='profile'),
     path('accounts/logout/', LogoutView.as_view(next_page='accounts:logged_out'), name='account_logout'),
     path('accounts/logged-out/', TemplateView.as_view(template_name='logged_out.html'), name='logged_out'),
 ]

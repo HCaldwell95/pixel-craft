@@ -19,9 +19,10 @@
     <p>See all of your account details here!</p>
 
     <div class="accounts-row-spacer row">
-        <div class="col">
-            <img src="{% if user.userprofile.picture %}{{ user.userprofile.picture.url }}?{{ user.userprofile.updated_at.timestamp }}{% else %}https://res.cloudinary.com/ddj2rpxcb/image/upload/v1746752329/user-default_ruxmux.png{% endif %}" 
-                 alt="Profile Picture" class="img-fluid profile-portrait">
+        <div class="col d-flex justify-content-center align-items-center">
+            <img src="{% if user.profile.picture %}{{ user.profile.picture.url }}?{{ user.profile.updated_at.timestamp }}{% else %}https://res.cloudinary.com/ddj2rpxcb/image/upload/v1746752329/user-default_ruxmux.png{% endif %}" 
+                 alt="Profile Picture" 
+                 class="image-fluid profile-portrait">
         </div>
         <form method="post" enctype="multipart/form-data" action="{% url 'accounts:upload_profile_picture' %}">
             {% csrf_token %}

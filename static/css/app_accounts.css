@@ -51,7 +51,7 @@ hr {
     box-sizing: border-box;
 }
 
-button, input, optgroup, select, textarea {
+button:not(.navbar-toggler), input, optgroup, select, textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ddd;

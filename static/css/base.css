@@ -19,7 +19,7 @@
 
 
 body {
-    background: url("/media/home-background.jpg") no-repeat center center fixed;
+    background: url("https://res.cloudinary.com/ddj2rpxcb/image/upload/f_auto, q_auto/v1747350318/home-background_gmzqzp.jpg") no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;

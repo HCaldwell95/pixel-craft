@@ -1,19 +1,30 @@
 
+@font-face {
+    font-family: 'Cormorant';
+    src: url('../fonts/Cormorant-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400;
+}
 
-body {
-    background: url("/media/home-background.jpg") no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);
-    color: #555;
-    font-family: 'Lato';
+@font-face {
+    font-family: 'Italiana';
+    src: url('../fonts/Italiana-Regular.ttf') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Audiowide';
+    src: url('../fonts/Audiowide-Regular.ttf') format('truetype');
+    font-weight: 400;
 }
 
 
-
-
-
-
-
+body {
+    background: url("https://res.cloudinary.com/ddj2rpxcb/image/upload/v1747350318/home-background_gmzqzp.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #555;
+    font-family: 'Lato', serif;
+}
 
 
 /* General Styles */
@@ -21,6 +32,7 @@ body {
 .hero-heading {
     color: #D0FFD1;
     text-shadow: 5px 7px 0 #354F43;
+    font-family: 'Audiowide', serif;
 }
 
 .logo-font {
@@ -30,6 +42,11 @@ body {
 .btn-black {
     background: black;
     color: white;
+}
+
+.transparent-background {
+    background-color: rgba(0, 0, 0, 0.5);  /* Transparent grey background */
+    width: 100%;
 }
 
 a {
@@ -81,9 +98,47 @@ a.category-badge > span.badge:hover {
 
 .section-heading {
     font-weight: 700;
+    font-family: 'Audiowide', serif;
     letter-spacing: 2mm;
     text-transform: uppercase;
 }
+
+.message-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #28a745;  /* Green color for success */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    display: none;  /* Initially hidden */
+}
+  
+.popup-message {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    z-index: 1050;
+    font-weight: 500;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    display: none;
+}
+
+#nav-logout {
+    padding-top: 8px;
+    padding-right: 10px;
+}
+
+button[type="submit"] {
+    font-size: var(--bs-nav-link-font-size)!important;
+}
+
 
 /* -------------------------------- Media Queries */
 
@@ -133,7 +188,7 @@ a.category-badge > span.badge:hover {
     }
 
     /* Hide portfolio cards beyond the 3rd on small screens */
-    .row .col-12:nth-of-type(n+4) {
+    .portfolio-container .row .col-12:nth-of-type(n+4) {
         display: none;
     }
 
@@ -209,18 +264,20 @@ a.category-badge > span.badge:hover {
 
     /* Centering card title and description */
     .portfolio-card .card-title {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    color: #424242;
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: #424242;
+    }
+
+    .portfolio-card .card-text {
+        font-size: 0.7rem;
+        color: #383838;
+    }
+
 }
 
-.portfolio-card .card-text {
-    font-size: 0.7rem;
-    color: #383838;
-}
 
-}
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {

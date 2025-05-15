@@ -109,8 +109,14 @@ WSGI_APPLICATION = 'pixel_craft.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+DEFAULT_DB_URL = f"sqlite:///{BASE_DIR / 'db.sqlite3'}"
+
 DATABASES = {
-    'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
+    'default': dj_database_url.config(
+        default=DEFAULT_DB_URL,
+        conn_max_age=600,
+        ssl_require=os.environ.get('DJANGO_ENV') == 'production'  # optional toggle
+    )
 }
 
 

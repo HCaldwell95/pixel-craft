@@ -35,6 +35,11 @@
 .navbar {
     background-color: #F9F9F9;
     padding: 0;
+    display: flex;
+}
+
+.navbar .logo {
+    flex: 1;
 }
 
 .navbar-toggler {
@@ -70,8 +75,11 @@
     border-left: 1px solid #ccc; /* Adds a border starting from "Products" */
 }
 
-.navbar-nav .nav-item {
-    padding-left: 115px;
+
+@media (min-width: 992px) {
+    .navbar-nav .nav-item {
+        padding-left: 115px;
+    }
 }
 
 

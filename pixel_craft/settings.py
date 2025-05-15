@@ -24,7 +24,8 @@ ALLOWED_HOSTS = [
     'pixel-craft.herokuapp.com',
     '8000-hcaldwell95-pixelcraft-hynv8epul44.ws-eu118.gitpod.io',
     "localhost",
-    "127.0.0.1"
+    "127.0.0.1",
+    'pixel-craft-p5-06d9a178cdb8.herokuapp.com',
 ]
 
 CSRF_TRUSTED_ORIGINS = [

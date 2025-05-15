@@ -1,1 +1,1 @@
-web: gunicorn pixel-craft.wsgi
+web: gunicorn pixel_craft.wsgi

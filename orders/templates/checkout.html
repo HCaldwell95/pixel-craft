@@ -1,7 +1,65 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container">
+<!-- checkout.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mock Stripe Checkout</title>
+  <script src="https://js.stripe.com/v3/"></script>
+  <style>
+    #card-element {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
   <h2>Checkout</h2>
-</div>
+  <form id="payment-form">
+    <div id="card-element"></div>
+    <button type="submit" id="submit">Pay</button>
+  </form>
+
+  <script>
+    // 1. Initialise Stripe
+    const stripe = Stripe("{{ stripe_public_key }}");
+    const elements = stripe.elements();
+    const card = elements.create('card');
+    card.mount('#card-element');
+
+    // 2. Handle form submission
+    document.getElementById('payment-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // 3. Call backend to create payment intent
+      const response = await fetch('/create-payment-intent', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+      });
+      const { clientSecret } = await response.json();
+
+      // 4. Confirm the card payment
+      const result = await stripe.confirmCardPayment(clientSecret, {
+        payment_method: {
+          card: card,
+        },
+      });
+
+      if (result.error) {
+        alert(result.error.message);
+      } else {
+        if (result.paymentIntent.status === 'succeeded') {
+          alert("💳 Payment successful!");
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+
 {% endblock %}

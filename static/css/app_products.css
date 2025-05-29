@@ -1,5 +1,5 @@
 body {
-    background: url("https://res.cloudinary.com/ddj2rpxcb/image/upload/f_auto,q_auto/v1747350312/products-background_gngimg.jpg") no-repeat center center fixed;
+    background: url("https://res.cloudinary.com/ddj2rpxcb/image/upload/v1747350312/products-background_gngimg.jpg") no-repeat center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;

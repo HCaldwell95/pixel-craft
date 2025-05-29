@@ -162,3 +162,7 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 AUTH_USER_MODEL = 'accounts.CustomUser'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'account_login'
+
+# settings.py
+STRIPE_PUBLIC_KEY = ("STRIPE_PUBLIC_KEY")
+STRIPE_SECRET_KEY = config("STRIPE_SECRET_KEY")

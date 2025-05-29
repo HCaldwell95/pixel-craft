@@ -107,7 +107,6 @@ hr {
     object-fit: fill;
 }
 
-
 /* --------------------------------Enquire-specific styles */
 
 label {
@@ -119,7 +118,6 @@ label {
 button {
     margin-top: 20px;
 }
-
 
 /* Blog-specific styles */
 
@@ -156,7 +154,6 @@ button {
 .blog-post a:hover {
     text-decoration: underline;
 }
-
 
 /* ------------------------------- Basket-specific styles */
 

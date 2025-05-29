@@ -10,10 +10,6 @@ environ.Env.read_env(env_file_path)
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
@@ -23,16 +19,19 @@ DEBUG = False
 ALLOWED_HOSTS = [
     'pixel-craft.herokuapp.com',
     '8000-hcaldwell95-pixelcraft-hynv8epul44.ws-eu118.gitpod.io',
-    "localhost",
-    "127.0.0.1",
+    '8000-hcaldwell95-pixelcraft-hynv8epul44.ws-eu119.gitpod.io',
+    '8000-hcaldwell95-pixelcraft-hynv8epul44.ws-eu120.gitpod.io',
+    'localhost',
+    '127.0.0.1',
     'pixel-craft-p5-06d9a178cdb8.herokuapp.com',
+    '*',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-hcaldwell95-pixelcraft-hynv8epul44.ws-eu118.gitpod.io',
+    'https://8000-hcaldwell95-pixelcraft-hynv8epul44.ws-eu119.gitpod.io',
+    'https://8000-hcaldwell95-pixelcraft-hynv8epul44.ws-eu120.gitpod.io',
 ]
-
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -50,6 +49,8 @@ INSTALLED_APPS = [
     'products',
     'orders',
     'crispy_forms',
+    'cloudinary',
+    'cloudinary_storage',
 ]
 
 AUTHENTICATION_BACKENDS = [
@@ -105,10 +106,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'pixel_craft.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
 DEFAULT_DB_URL = f"sqlite:///{BASE_DIR / 'db.sqlite3'}"
 
 DATABASES = {
@@ -118,11 +115,6 @@ DATABASES = {
         ssl_require=os.environ.get('DJANGO_ENV') == 'production'  # optional toggle
     )
 }
-
-
-
-# Password validation
-# https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -138,10 +130,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-
-# Internationalization
-# https://docs.djangoproject.com/en/5.1/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 

@@ -1,8 +1,7 @@
 <!doctype html>
 <html lang="en">
     {% load static %}
-
-  <head>
+    <head>
     {% block meta %}
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="utf-8">
@@ -32,127 +31,123 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     {% endblock %}
-    
+
     {% block extra_js %}
     {% endblock %}
 
     <title>PixelCraft {% block extra_title %}{% endblock %}</title>
 
-  </head>
-
-
-  <body>
-    <header class="container-fluid fixed-top">
-        <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-white my-0"><strong>Pixel</strong>Craft</h2>
-                </a>
-            </div>
-        
-            <!-- Main Navbar (Desktop Only) -->
-        
-            <div class="row main-nav">
-                <nav class="navbar navbar-expand-lg navbar-light w-100">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    {% include 'includes/main-nav.html' %}
-                </nav>
-            </div>
-        </div>
-
-        <!-- Mobile Navigation (Includes the Mobile Top Header and Navbar) -->
-        <div class="d-block d-lg-none">
-            {% include 'includes/mobile-top-header.html' %}
-        </div>
-
-        <div id="delivery-banner" class="row text-center d-none d-md-flex">
-            <div class="col bg-black text-white">
-                <h4 class="logo-font my-1">Crafting Your Vision, Pixel by Pixel</h4>                
-            </div>            
-        </div>
-    </header>
-
-    {% if messages %}
-        <div id="popup-message" class="popup-message">
-            {% for message in messages %}
-                <p>{{ message }}</p>
-            {% endfor %}
-        </div>
-    {% endif %}
-
-    {% block page_header %}
-    {% endblock %}
-
-    {% block content %}
-    {% endblock %}
-
-    {% block postloadjs %}
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const messageContainer = document.querySelector('.message-container');
-                if (messageContainer) {
-                messageContainer.style.display = "block";
-                setTimeout(() => {
-                    messageContainer.style.display = "none";
-                }, 3000); // Hide after 3 seconds
-                }
-            });
-        </script>
-    {% endblock %}
-
-    
-  </body>
-
-  <footer class="footer bg-offwhite py-5">
-    <div class="container">
-        <div class="row text-center flex-column flex-md-row footer-container">
-            <!-- Left Column: Studio Hours -->
-            <div class="col-12 col-md-4 mb-4 mb-md-0 footer-hours">
-                <h5 class="footer-header">Studio Hours</h5>
-                <p>Mon-Fri: 9:00 AM - 6:00 PM</p>
-                <p>Sat: 10:00 AM - 4:00 PM</p>
-                <p>Sun: Closed</p>
-                <div class="social-links">
-                    <a href="#" class="text-black mr-3"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="text-black mr-3"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="text-black mr-3"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="text-black mr-3"><i class="fab fa-linkedin"></i></a>
+    </head>
+    <body>
+        <header class="container-fluid fixed-top">
+            <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                    <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                        <h2 class="logo-font text-white my-0"><strong>Pixel</strong>Craft</h2>
+                    </a>
+                </div>
+            
+                <!-- Main Navbar (Desktop Only) -->
+            
+                <div class="row main-nav">
+                    <nav class="navbar navbar-expand-lg navbar-light w-100">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        {% include 'includes/main-nav.html' %}
+                    </nav>
                 </div>
             </div>
 
-            <!-- Logo -->
-            <div class="col-12 col-md-4 mb-4 mb-md-0">
-                <a href="{% url 'home' %}" class="nav-link">
-                    <img src="{% static 'images/logo.png' %}" alt="Logo" class="footer-logo mx-auto d-block">
-                </a>
+            <!-- Mobile Navigation (Includes the Mobile Top Header and Navbar) -->
+            <div class="d-block d-lg-none">
+                {% include 'includes/mobile-top-header.html' %}
             </div>
 
-            <!-- Right Column: About -->
-            <div class="col-12 col-md-4 footer-about">
-                <h5 class="footer-header">About</h5>
-                <p>We are a graphic design creation business, focusing on innovative designs for a variety of media. We create professional, unique designs that help brands stand out.</p>
-                <a href="{% url 'diversity_policy' %}" class="text-black">Diversity Policy</a>
+            <div id="delivery-banner" class="row text-center d-none d-md-flex">
+                <div class="col bg-black text-white">
+                    <h4 class="logo-font my-1">Crafting Your Vision, Pixel by Pixel</h4>                
+                </div>            
+            </div>
+        </header>
+
+        {% if messages %}
+            <div id="popup-message" class="popup-message">
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {% block page_header %}
+        {% endblock %}
+
+        {% block content %}
+        {% endblock %}
+
+        {% block postloadjs %}
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const messageContainer = document.querySelector('.message-container');
+                    if (messageContainer) {
+                    messageContainer.style.display = "block";
+                    setTimeout(() => {
+                        messageContainer.style.display = "none";
+                    }, 3000); // Hide after 3 seconds
+                    }
+                });
+            </script>
+        {% endblock %}
+    </body>
+
+    <footer class="footer bg-offwhite py-5">
+        <div class="container">
+            <div class="row text-center flex-column flex-md-row footer-container">
+                <!-- Left Column: Studio Hours -->
+                <div class="col-12 col-md-4 mb-4 mb-md-0 footer-hours">
+                    <h5 class="footer-header">Studio Hours</h5>
+                    <p>Mon-Fri: 9:00 AM - 6:00 PM</p>
+                    <p>Sat: 10:00 AM - 4:00 PM</p>
+                    <p>Sun: Closed</p>
+                    <div class="social-links">
+                        <a href="#" class="text-black mr-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-black mr-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-black mr-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-black mr-3"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- Logo -->
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <a href="{% url 'home' %}" class="nav-link">
+                        <img src="{% static 'images/logo.png' %}" alt="Logo" class="footer-logo mx-auto d-block">
+                    </a>
+                </div>
+
+                <!-- Right Column: About -->
+                <div class="col-12 col-md-4 footer-about">
+                    <h5 class="footer-header">About</h5>
+                    <p>We are a graphic design creation business, focusing on innovative designs for a variety of media. We create professional, unique designs that help brands stand out.</p>
+                    <a href="{% url 'diversity_policy' %}" class="text-black">Diversity Policy</a>
+                </div>
+            </div>
+
+            <!-- Line break -->
+            <hr class="footer-divider">
+
+            <div class="row text-center">
+                <div class="col-12">
+                    <ul class="footer-links list-inline">
+                        <li class="list-inline-item"><a href="{% url 'work_with_me' %}">Work With Me</a></li>
+                        <li class="list-inline-item"><a href="{% url 'experience' %}">Experience</a></li>
+                        <li class="list-inline-item"><a href="{% url 'portfolio' %}">Portfolio</a></li>
+                        <li class="list-inline-item"><a href="{% url 'faq' %}">FAQ</a></li>
+                        <li class="list-inline-item"><a href="{% url 'about' %}">About</a></li>
+                        <li class="list-inline-item"><a href="{% url 'enquire' %}">Enquire</a></li>
+                        <li class="list-inline-item"><a href="{% url 'blog' %}">Blog</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-
-        <!-- Line break -->
-        <hr class="footer-divider">
-
-        <div class="row text-center">
-            <div class="col-12">
-                <ul class="footer-links list-inline">
-                    <li class="list-inline-item"><a href="{% url 'work_with_me' %}">Work With Me</a></li>
-                    <li class="list-inline-item"><a href="{% url 'experience' %}">Experience</a></li>
-                    <li class="list-inline-item"><a href="{% url 'portfolio' %}">Portfolio</a></li>
-                    <li class="list-inline-item"><a href="{% url 'faq' %}">FAQ</a></li>
-                    <li class="list-inline-item"><a href="{% url 'about' %}">About</a></li>
-                    <li class="list-inline-item"><a href="{% url 'enquire' %}">Enquire</a></li>
-                    <li class="list-inline-item"><a href="{% url 'blog' %}">Blog</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
     </footer>
 </html>

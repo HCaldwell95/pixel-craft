@@ -1,5 +1,5 @@
 body {
-    background: url("https://res.cloudinary.com/ddj2rpxcb/image/upload/f_auto, q_auto/v1747350312/products-background_gngimg.jpg") no-repeat center center fixed;
+    background: url("https://res.cloudinary.com/ddj2rpxcb/image/upload/f_auto,q_auto/v1747350312/products-background_gngimg.jpg") no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -11,12 +11,12 @@ body {
 }
 
 .card-img-top {
-    height: 300px; /* Adjust the height to the desired size */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
+    height: 300px; 
+    object-fit: cover;
 }
 
 .transparent-container-fw  {
-    background-color: rgba(0, 0, 0, 0.8);  /* Transparent grey background */
+    background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
     padding-top: 1.5em;
 }

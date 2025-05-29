@@ -75,11 +75,8 @@
     border-left: 1px solid #ccc; /* Adds a border starting from "Products" */
 }
 
-
 @media (min-width: 992px) {
     .navbar-nav .nav-item {
         padding-left: 115px;
     }
 }
-
-

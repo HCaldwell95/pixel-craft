@@ -1,9 +1,4 @@
 from django.contrib import admin
-
-# Register your models here.
-
-# admin.py
-from django.contrib import admin
 from .models import Product, ProductOption
 
 class ProductOptionInline(admin.TabularInline):
@@ -13,4 +8,3 @@ class ProductOptionInline(admin.TabularInline):
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     inlines = [ProductOptionInline]
-

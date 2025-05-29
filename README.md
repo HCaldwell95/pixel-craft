@@ -102,7 +102,7 @@ The website is built with a specific demographic in mind:
 * Interests: This audience appreciates personalised branding, visual storytelling, and high-quality digital products. They are likely to follow design trends, support independent creatives, and value sustainability, authenticity, and originality in the brands they engage with.
 
 #### 🌐 User Expectations
-Based on these insights, users of Pixel Craft expect:
+Based on these insights, users of PixelCraft expect:
 
 * Seamless Navigation – A site that is intuitive, fast, and flows logically from one section to another.
 
@@ -118,16 +118,50 @@ By keeping these user expectations and behaviours in mind, Pixel Craft ensures a
 
 ### Purpose
 
-The purpose of the PixelCraft website is to showcase and promote high-quality design services, offering a professional portfolio of creative assets, while providing a seamless, responsive, and mobile-friendly user experience for clients to view, inquire, and purchase designs, all aimed at establishing trust and brand identity.
+The purpose of the PixelCraft website is to showcase and promote high-quality design services, offering a professional portfolio of creative assets, while providing a seamless, responsive, and mobile-friendly user experience for clients to view, inquire, and purchase designs, all aimed at establishing trust and brand identity. This e-commerce website will be focusing on a B2C.
 
 ### User Stories
 #### For This Sprint
+| id  |  Content | Label |
+| ------ | ------ | ------ |
+| [1](https://github.com/HCaldwell95/pixel-craft/issues/1) | As a user, I want the products to have clear pricing information, so that I know how much I will be spending. | Must Have |
+| [2](https://github.com/HCaldwell95/pixel-craft/issues/2) | As a user, I want to browse a wide range of Graphic Design Templates / Products so that I can choose one that suits my needs. | Must Have |
+| [3](https://github.com/HCaldwell95/pixel-craft/issues/3) | As a user with visual or physical impairments, I want the website to follow accessibility standards so that I can navigate and interact with it without barriers. | Must Have |
+| [4](https://github.com/HCaldwell95/pixel-craft/issues/4) | As a user I can navigate through the website easily so that I can get more information about the products available. | Should Have |
+| [5](https://github.com/HCaldwell95/pixel-craft/issues/5) | As a designer, I want to set custom prices and descriptions for my products so that I can properly showcase their value. | Should Have |
+| [6](https://github.com/HCaldwell95/pixel-craft/issues/6) | As a user, I want to update my personal information so that my profile remains accurate. | Should Have |
+| [7](https://github.com/HCaldwell95/pixel-craft/issues/7) | As a user, I want to view detailed product descriptions and previews so that I can make an informed decision before purchasing. | Must Have |
+| [8](https://github.com/HCaldwell95/pixel-craft/issues/8) | As a visitor to the website, I want to access PixelCraft's social media profiles easily so that I can follow the business and stay updated on new designs and offers. | Could Have |
+| [9](https://github.com/HCaldwell95/pixel-craft/issues/9) | As a website visitor I want the site to load quickly and be simple to navigate so that I can find information efficiently without delays or confusion. | Should Have |
+| [10](https://github.com/HCaldwell95/pixel-craft/issues/10) | As a user accessing the site from various devices, I want the website to adapt to different screen sizes and orientations so that I can have a consistent and user-friendly experience on desktop, tablet, and mobile. | Must Have |
+| [11](https://github.com/HCaldwell95/pixel-craft/issues/11) | As a user, I want to communicate with the designer about my custom request so that we can collaborate on the final design. | Could Have |
+| [12](https://github.com/HCaldwell95/pixel-craft/issues/12) | As a user, I want to add items to a shopping basket, so that I can review my selections before making a purchase. | Must Have |
+| [13](https://github.com/HCaldwell95/pixel-craft/issues/13) | As a user, I want to create an account so that I can track my orders and manage my profile. | Must Have |
+| [14](https://github.com/HCaldwell95/pixel-craft/issues/14) | As a user, I want to search for products using keywords and filters so that I can quickly find designs relevant to my preferences. | Should Have |
+| [15](https://github.com/HCaldwell95/pixel-craft/issues/15) | As a user, I want to see related and recommended designs so that I can explore other options I might like. | Could Have |
+| [16](https://github.com/HCaldwell95/pixel-craft/issues/16) | As a user, I want to apply discount codes or promotions at checkout, so that I can save money on my order. | Must Have |
+| [17](https://github.com/HCaldwell95/pixel-craft/issues/17) | As a user, I want a secure and straightforward checkout process so that I can feel confident my payment information is safe. | Must Have |
+| [18](https://github.com/HCaldwell95/pixel-craft/issues/18) | As a user, I want to pay using multiple payment options, so that I can use my preferred method. | Must Have |
+| [19](https://github.com/HCaldwell95/pixel-craft/issues/19) | As a user, I want to receive an order confirmation email with my invoice and download link, so that I can access my purchase anytime. | Should Have |
+| [20](https://github.com/HCaldwell95/pixel-craft/issues/20) | As a user, I want to request custom graphic designs, so that I can get a design tailored to my unique needs. | Should Have |
+| [21](https://github.com/HCaldwell95/pixel-craft/issues/21) | As a user, I want to upload my ideas or reference images for custom orders, so that the designer understands my requirements. | Should Have |
+| [22](https://github.com/HCaldwell95/pixel-craft/issues/22) | As a user, I want to log in and view my order history so that I can easily access previous purchases. | Should Have |
+| [23](https://github.com/HCaldwell95/pixel-craft/issues/23) | As a user, I want to save my favourite designs to a wishlist so that I can revisit them later. | Could Have |
+| [24](https://github.com/HCaldwell95/pixel-craft/issues/24) | As a designer, I want to upload and list my designs for sale so that users can purchase them through the platform. | Must Have |
+| [26](https://github.com/HCaldwell95/pixel-craft/issues/26) | As an admin, I want to approve or reject user-submitted custom design requests so that the platform maintains quality and consistency. | Should Have |
+| [27](https://github.com/HCaldwell95/pixel-craft/issues/27) | As an admin, I want to manage product listings and categories so that users can easily find what they need. | Must Have |
+| [28](https://github.com/HCaldwell95/pixel-craft/issues/28) | As an admin, I want to monitor and resolve disputes (e.g., refunds, design quality) so that users and designers have a fair resolution process. | Should Have |
 
+#### For This Sprint
 #### For Future Sprints
+| id  |  Content | Label |
+| ------ | ------ | ------ |
+| [25](https://github.com/HCaldwell95/pixel-craft/issues/25) | As a designer, I want to see sales reports and earnings so that I can track my performance and revenue. | Won't Have |
+| [29](https://github.com/HCaldwell95/pixel-craft/issues/22) | As an admin, I want to view analytics on user behaviour and sales so that I can make data-driven improvements to the platform. | Won't Have |
 
 ## Scope
 
-n order to ensure that the current sprint are completed, the focus was as follows:
+In order to ensure that the current sprint are completed, the focus was as follows:
 
 #### Sprint 1
 
@@ -149,7 +183,7 @@ This sprint focuses on the “Must Haves” and the marking criteria:
 
 * Blog Page Launch: Create a blog section to showcase relevant and engaging content for the Pixelcraft community.
 
-* Blog Enhancements: Add interactive elements to the blog, such as allowing users to select and save their favourite roast preferences.
+* Blog Enhancements: Add interactive elements to the blog, such as allowing users to select and save their preferences.
 
 ## Future Sprints
 
@@ -293,8 +327,33 @@ Together, this font combination creates a striking yet cohesive visual identity,
 
 #### Icons
 
+To incorporate icons throughout the website, Font Awesome will be used. Icons specifically enhance the social media links for better visual recognition and user interaction.
+
 ### Colours
-   #### Responsive Screens
+
+The colour palette for this project was carefully chosen to create a sleek and modern aesthetic, centred around greens and teal tones with ample whitespace for balance. A dark geometric teal image serves as the website background, layered with a transparent overlay that subtly lightens or darkens areas around the main content on the homepage for better focus.
+
+The following colours were selected to maintain consistency and visual appeal:
+
+* #D0FFD1 – Used as accent colours to highlight key elements and add vibrancy throughout the site.
+
+* #555555 – Applied as the primary font colour for the main body text, ensuring readability and a clean look.
+
+* #212529 – Used for badges and small UI elements, providing contrast and grounding the design.
+
+Together, these colours contribute to an overall theme of slick greens and teals, balanced with generous whitespace to create a fresh, contemporary user experience.
+
+#### Responsive Screens
+
+Responsive Screens
+The website will be built for a small mobile screen of width 320px and then will also meet the requirements for a medium/tablet, large and extra-large screen, as shown in the table below.
+
+| Screen Size      | Breakpoint  |
+|------------------|-------------|
+| Small / Mobile   | 320px       |
+| Medium / Tablet  | 768px       |
+| Large            | 992px       |
+| Extra-large      | 1400+ px    |
 
 ## Features
 
@@ -318,7 +377,6 @@ Together, this font combination creates a striking yet cohesive visual identity,
 - **Product Showcase**: View detailed information and images of available products.
 - **Order Management**: Place orders for desired services and track order status.
 - **Responsive Design**: Optimised for various devices, ensuring a seamless user experience across desktops, tablets, and smartphones.
-
 
 ## Technologies Used
 
@@ -348,28 +406,6 @@ Together, this font combination creates a striking yet cohesive visual identity,
 
 ## Testing
 
-   ### Code Validation
-      #### W3C HTML Validator
-         ##### First Attempt of HomePage
-         ##### Final Attempt of HomePage
-
-      #### W3C CSS Validator
-         ##### First Attempt of CSS Files
-
-      #### Python Syntax Checker PEP8 Validation
-         ##### First Attempt
-         ##### Final Attempt
-
-      #### Lighthouse
-      #### Responsiveness
-      #### Web Aim Contrast Checker
-      #### Browser Compatability
-      #### Manual Testing
-
-   ### Bugs
-      #### Resolved
-      #### Unresolved
-
 Comprehensive testing has been conducted to ensure the platform's functionality and responsiveness:
 
 Unit Tests: Django's testing framework was used to test models, views, and forms.
@@ -379,6 +415,34 @@ Integration Tests: Simulated user interactions to ensure different components wo
 Manual Testing: Performed across various devices and browsers to verify responsiveness and compatibility.
 
 Payment Processing: Tested Stripe integration using test card numbers to ensure secure transactions.
+
+   ### Code Validation
+
+   #### W3C HTML Validator
+   ##### First Attempt of HomePage
+
+   ##### Final Attempt of HomePage
+
+   #### W3C CSS Validator
+
+   ##### First Attempt of CSS Files
+
+   #### Python Syntax Checker PEP8 Validation
+
+   ##### First Attempt
+
+   ##### Final Attempt
+
+   #### Lighthouse
+   #### Responsiveness
+   #### Web Aim Contrast Checker
+   #### Browser Compatability
+   #### Manual Testing
+
+   ### Bugs
+   #### Resolved
+
+   #### Unresolved
 
 ## Deployment
 
@@ -428,8 +492,6 @@ To set up the project locally, follow these steps:
    ```
 
    Access the application at `http://127.0.0.1:8000/`.
-
-
 
 ## Contributing
 

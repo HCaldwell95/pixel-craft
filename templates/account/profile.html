@@ -20,10 +20,11 @@
 
     <div class="accounts-row-spacer row">
         <div class="col d-flex justify-content-center align-items-center">
-            <img src="{% if user.profile.picture %}{{ user.profile.picture.url }}?{{ user.profile.updated_at.timestamp }}{% else %}https://res.cloudinary.com/ddj2rpxcb/image/upload/v1746752329/user-default_ruxmux.png{% endif %}" 
-                 alt="Profile Picture" 
-                 class="image-fluid profile-portrait">
+            <img src="{% if user.profile.picture %}{{ user.profile.picture.url }}{% else %}https://res.cloudinary.com/ddj2rpxcb/image/upload/v1746752329/user-default_ruxmux.png{% endif %}"
+                class="image-fluid profile-portrait"
+                alt="Profile Picture">
         </div>
+
         <form method="post" enctype="multipart/form-data" action="{% url 'accounts:upload_profile_picture' %}">
             {% csrf_token %}
             <div class="form-group">
@@ -32,7 +33,6 @@
             </div>
         </form>        
     </div>
-    
 
     <!-- Profile Table -->
     <div class="col">

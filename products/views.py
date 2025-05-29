@@ -29,7 +29,6 @@ def add_to_cart(request):
 
         product = option.product
         price = option.price
-
         cart = request.session.get('cart', [])
         item_exists = False
 
@@ -46,7 +45,6 @@ def add_to_cart(request):
                 'quantity': quantity,
                 'price': float(price),
             })
-
         request.session['cart'] = cart
         return redirect('cart')
 

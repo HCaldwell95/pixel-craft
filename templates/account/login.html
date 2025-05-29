@@ -22,13 +22,13 @@
 
         <form method="post">
             {% csrf_token %}
-            {{ form.as_p }}  <!-- Use form.as_p to render the entire form with <p> tags -->
+            {{ form.as_p }}
 
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">Sign In</button>
             </div>
         </form>
-
+        
         <div class="additional-links">
             <p><a href="{% url 'accounts:signup' %}">Don't have an account? Sign up</a></p>
         </div>

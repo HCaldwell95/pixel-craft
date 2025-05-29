@@ -1,6 +1,6 @@
 body {
-    background: #fff; /* Sets a white background */
-    background-image: none; /* Ensures no background image is displayed */
+    background: #fff;
+    background-image: none;
     color: #555;
     font-family: 'Lato';
     font-size: 18px;
@@ -59,7 +59,6 @@ button:not(.navbar-toggler), input, optgroup, select, textarea {
     box-sizing: border-box;
     font-size: 16px;
 }
-
 
 /* ---------------------------------------------------- Profile Page */
 

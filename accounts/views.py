@@ -48,6 +48,7 @@ def upload_profile_picture(request):
     """
     if request.method == 'POST' and request.FILES.get('profile_picture'):
         profile, created = UserProfile.objects.get_or_create(user=request.user)  # Ensures profile exists
+        print("Storage class:", profile.picture.storage.__class__)
         profile.picture = request.FILES['profile_picture']
         profile.save()
         messages.success(request, 'Your profile picture has been updated.')

@@ -2,6 +2,7 @@ import os
 import environ
 import dj_database_url
 from pathlib import Path
+from decouple import config
 
 env = environ.Env()
 env_file_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env')

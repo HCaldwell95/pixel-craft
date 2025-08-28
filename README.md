@@ -310,6 +310,8 @@ Balsamiq was used to design the initial concept for the website’s layout and u
 
 Basic wireframes are provided below, though it’s worth noting that some elements may differ slightly from the final implemented design.
 
+![Wireframe Image](documentation/wireframe.png)
+
 ### Surface
 The surface plane focuses on the visual aesthetics and user interface of the website. Choosing the right colours, typography, and icons is essential to creating an engaging and visually appealing experience for users.
 
@@ -416,82 +418,118 @@ Manual Testing: Performed across various devices and browsers to verify responsi
 
 Payment Processing: Tested Stripe integration using test card numbers to ensure secure transactions.
 
-   ### Code Validation
+### Code Validation
 
-   #### W3C HTML Validator
-   ##### First Attempt of HomePage
+#### W3C HTML Validator
+##### First Attempt of HomePage
 
-   ##### Final Attempt of HomePage
+##### Final Attempt of HomePage
 
-   #### W3C CSS Validator
+#### W3C CSS Validator
 
-   ##### First Attempt of CSS Files
+##### First Attempt of CSS Files
 
-   #### Python Syntax Checker PEP8 Validation
+#### Python Syntax Checker PEP8 Validation
 
-   ##### First Attempt
+##### First Attempt
 
-   ##### Final Attempt
+##### Final Attempt
 
-   #### Lighthouse
-   #### Responsiveness
-   #### Web Aim Contrast Checker
-   #### Browser Compatability
-   #### Manual Testing
+#### Lighthouse
+#### Responsiveness
+#### Web Aim Contrast Checker
+#### Browser Compatability
+#### Manual Testing
 
-   ### Bugs
-   #### Resolved
+### Bugs
+#### Resolved
 
-   #### Unresolved
+#### Unresolved
 
 ## Deployment
 
-To set up the project locally, follow these steps:
+### To set up the project locally, follow these steps:
 
-1. **Clone the repository**:
+   1. **Clone the repository**:
 
-   ```bash
-   git clone https://github.com/HCaldwell95/pixel-craft.git
-   ```
+      ```bash
+      git clone https://github.com/HCaldwell95/pixel-craft.git
+      ```
 
-2. **Navigate to the project directory**:
+   2. **Navigate to the project directory**:
 
-   ```bash
-   cd pixel-craft
-   ```
+      ```bash
+      cd pixel-craft
+      ```
 
-3. **Create and activate a virtual environment**:
+   3. **Create and activate a virtual environment**:
 
-   ```bash
-   python3 -m venv env
-   source env/bin/activate  # On Windows, use 'env\Scripts\activate'
-   ```
+      ```bash
+      python3 -m venv env
+      source env/bin/activate  # On Windows, use 'env\Scripts\activate'
+      ```
 
-4. **Install the required dependencies**:
+   4. **Install the required dependencies**:
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+      ```bash
+      pip install -r requirements.txt
+      ```
 
-5. **Apply migrations**:
+   5. **Apply migrations**:
 
-   ```bash
-   python manage.py migrate
-   ```
+      ```bash
+      python manage.py migrate
+      ```
 
-6. **Create a superuser**:
+   6. **Create a superuser**:
 
-   ```bash
-   python manage.py createsuperuser
-   ```
+      ```bash
+      python manage.py createsuperuser
+      ```
 
-7. **Run the development server**:
+   7. **Run the development server**:
 
-   ```bash
-   python manage.py runserver
-   ```
+      ```bash
+      python manage.py runserver
+      ```
 
-   Access the application at `http://127.0.0.1:8000/`.
+      Access the application at `http://127.0.0.1:8000/`.
+
+   ### Heroku Hosting:
+
+   During the process of coding up the website, the code was deployed on Heroku to allow for continuous manual testing and code validation. The following steps were conducted to deploy the website on Heroku:
+
+   ### Create Application
+   1. Create a Heroku account if you don’t have one and login.
+   2. Create a new application, by selecting the “new” button on the top right of the dashboard and click “Create new app”.
+   3. Choose a unique name for the application and select the region you live in, followed by "Create App".
+
+   ### ElephantSQL
+   4. Go to [elephantsql.com](https://www.elephantsql.com/), login with GitHub and create a new instance.
+   5. Copy the URL once the project instance has been created. This value can also be saved with as environment variable used to equal the `DATABASES` variable in `settings.py`.
+   6. Install the `dj-database-url` package version 0.5.0 by using `pip3 install dj_database_url==0.5.0` to format the URL into one that Django can use, subsequently updating the `requirements.txt`.
+
+   ## Final Repo Preparations
+   7. Make sure to make any migrations in the project, by typing `python3 manage.py makemigrations` followed by `python3 manage.py migrate` into the terminal.
+   8. Ensure a `Procfile`, which contains `web: gunicorn [project_name].wsgi:application` is added to the project.
+
+   ## Heroku Deploy
+   9. Go back to Heroku and when the Project’s page opens up, go to the "settings" tab and scroll down to the “Config Vars” section. 
+   10. Add all relevant following key-value pairs in the “Config Vars” section. Examples include: 
+      * Key = PORT : Value = 8000
+      * Key = SECRET_KEY : Value = Django Secret Key value obtained from `settings.py`
+      * Key = DATABASE_URL : Value = ElephantSQL URL from point 5.
+   As well as all the relevant stripe and AWS values.
+   11. Go to the “Deploy” tab next and scroll down to the GitHub deployment method.
+   12. Search for the suitable repository and then connect to it by selecting the “Connect” button.
+   13. Scroll down to the bottom of the “Deploy” Page and select the type of deployment you want to conduct. If you opt to “Automatically Deploy”, it will deploy every time you push new code to your repository. Otherwise, you will have to manually deploy, by selecting the button at the bottom of the page.
+   14. The application is now deployed!
+
+   \
+   &nbsp;
+   [Back to Top](#table-of-contents)
+   \
+   &nbsp;
 
 ## Contributing
 
@@ -524,6 +562,27 @@ We welcome contributions to enhance Pixel Craft. To contribute:
 Please ensure your code follows the project's coding standards and includes relevant tests.
 
 ## Credits
+
+### For Code Help and Advice
+* [ChatGPT](https://chatgpt.com/) - For quality checking code.
+\
+&nbsp;
+
+- Logo Icon - <a href="https://www.flaticon.com/free-icons/logo" title="logo icons">Logo icons created by Freepik - Flaticon</a>
+
+- Web Design - <a href="https://www.flaticon.com/free-icons/graphic-design" title="graphic design icons">Graphic design icons created by Freepik - Flaticon</a>
+
+- Sationary Design - <a href="https://www.flaticon.com/free-icons/agenda" title="agenda icons">Agenda icons created by Freepik - Flaticon</a>
+
+- Busines Cards - <a href="https://www.flaticon.com/free-icons/business-card" title="business card icons">Business card icons created by Freepik - Flaticon</a>
+
+- Social Media - <a href="https://www.flaticon.com/free-icons/marketing" title="marketing icons">Marketing icons created by Freepik - Flaticon</a>
+
+- Brochure Design - <a href="https://www.flaticon.com/free-icons/brochure" title="brochure icons">Brochure icons created by juicy_fish - Flaticon</a>
+
+- Flyer Design - <a href="https://www.flaticon.com/free-icons/flyers" title="flyers icons">Flyers icons created by andinur - Flaticon</a>
+
+- Packaging Design - <a href="https://www.flaticon.com/free-icons/product-design" title="product design icons">Product design icons created by Uniconlabs - Flaticon</a>
 
 ## Licence
 

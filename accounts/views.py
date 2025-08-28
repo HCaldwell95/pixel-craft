@@ -47,12 +47,19 @@ def upload_profile_picture(request):
     Allows users to upload and update their profile picture.
     """
     if request.method == 'POST' and request.FILES.get('profile_picture'):
-        profile, created = UserProfile.objects.get_or_create(user=request.user)  # Ensures profile exists
-        print("Storage class:", profile.picture.storage.__class__)
-        profile.picture = request.FILES['profile_picture']
-        profile.save()
-        messages.success(request, 'Your profile picture has been updated.')
+        # Ensure the user has a profile
+        profile, created = UserProfile.objects.get_or_create(user=request.user)
+
+        # Assign the uploaded file to the correct field and handle errors
+        try:
+            profile.profile_picture = request.FILES['profile_picture']  # Use correct field name
+            profile.save()
+            messages.success(request, 'Your profile picture has been updated.')
+        except Exception as e:
+            messages.error(request, f"Failed to update profile picture: {e}")
+
     return redirect('profile')
+
 
 
 # View for editing the user profile

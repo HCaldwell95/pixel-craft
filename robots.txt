@@ -1,0 +1,23 @@
+# robots.txt for PixelCraft - public e-commerce website
+
+# Block all crawlers from sensitive/admin pages
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /logout/
+Disallow: /signup/
+Disallow: /profile/
+Disallow: /cart/
+Disallow: /checkout/
+
+# Optional: prevent duplicate content on search/filter pages
+Disallow: /search/
+Disallow: /filters/
+
+# Allow crawling of static assets (images, JS, CSS)
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+# Sitemap location
+Sitemap: https://pixel-craft-p5-06d9a178cdb8.herokuapp.com/sitemap.xml
